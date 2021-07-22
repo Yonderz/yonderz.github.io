@@ -1,2 +1,2 @@
-# yonderz.github.io
+# # [Eurekz](https://www.eurekz.com)
 Personal Website
