@@ -56,7 +56,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: yonderz/Yonderz.github.io
+repository: yonderz/yonderz.github.io
 repository_tree: dev
 
 
@@ -215,7 +215,7 @@ defaults:
       license: false
       #aside:
       #  toc: false
-      show_edit_on_github: false
+      show_edit_on_github: true
       show_subscribe: false
       pageview: true
       comment: true
