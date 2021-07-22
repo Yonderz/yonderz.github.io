@@ -1,0 +1,32 @@
+---
+title: Fundamental Theorem of Algebra
+mathjax: true
+tags: complex-analysis
+---
+
+\documentclass{article}
+%preamble
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Fundamental Theorem of Algebra}
+%{name of the theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+\begin{thm}
+	
+	Every polynomial of degree greater than zero with complex coefficients has at least one zero.
+\end{thm}	
+
+\begin{proof}
+	Assume that $p(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots+a_0=0$ has no solutions. Then $1/p(z)$ is entire, i.e. it is differentiable on $\mathbb{C}$. Therefore $1/p(z)$ is also continuous. Also notes, as $|z| \rightarrow \infty$, $|1/p(z)| \rightarrow 0$
+	
+	Thus, $$\exists M_R>0 :(  \exists R>0:\forall z \in B_R=\{z\in \mathbb{C}: |z|\leq R\}, |1/p(z)| \leq M_R)$$
+	
+
+	$1/p(z)$ is entire and bounded so it is a constant. But $p(z)$ is not a constant. Contradiction, thus it must has at least one zero.
+\end{proof}			
+			
+\end{document}
