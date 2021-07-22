@@ -1,0 +1,60 @@
+---
+title: Primitive root theorem
+mathjax: true
+tags: complex-analysis
+key: 2021-07-22-primitive-root-theorem
+---
+<blockquote class="statement"><p><strong>Primitive root theorem</strong> Let p be a prime.<span class="intersentencespace"></span> Then for any d
+    dividing <span class="inline_math">\( p-1 \)</span>, there are exactly <span class="inline_math">\( \phi(d)
+        \)</span> elements of order d in <span class="inline_math">\( (\mathbb Z / p \mathbb Z)^\times \)</span>.<span
+        class="intersentencespace"></span> In particular there are <span class="inline_math">\( \phi(p-1) \)</span>
+    primitive roots mod p.<span class="intersentencespace"></span></p></blockquote>
+<!--more-->
+
+<ol>
+    <li><span class="inline_math">\( H_m \)</span>: For any <span class="inline_math">\( d_i \leq m \)</span> dividing
+        <span class="inline_math">\( p-1 \)</span>, there are exactly <span class="inline_math">\( \phi(d_i) \)</span>
+        elements of order <span class="inline_math">\( d_i \)</span> in <span class="inline_math">\( (\mathbb Z / p
+            \mathbb Z)^\times \)</span>.<span class="intersentencespace"></span>
+    </li>
+    <li><span class="inline_math">\( H_1 \)</span>: Only positive divisor of <span class="inline_math">\( p-1 \)</span>
+        less than 1 is 1.<span class="intersentencespace"></span> <span class="inline_math">\( H_1 \)</span> is
+        obviously true.<span class="intersentencespace"></span>
+    </li>
+    <li><span class="inline_math">\( H_k \)</span>: Assume <span class="inline_math">\( H_m \)</span> holds for some
+        positive integer k.<span class="intersentencespace"></span>
+    </li>
+    <li><span class="inline_math">\( H_{k+1} \)</span>:
+        <ol>
+            <li><span class="inline_math">\( k+1 \)</span> doesn’t divide <span class="inline_math">\( p-1
+                    \)</span>.<span class="intersentencespace"></span> Then <span class="inline_math">\( H_{k+1}
+                    \)</span> is true since <span class="inline_math">\( H_k \)</span> is true.<span
+                    class="intersentencespace"></span>
+            </li>
+            <li><span class="inline_math">\( k+1 \)</span> divides <span class="inline_math">\( p-1 \)</span>.<span
+                    class="intersentencespace"></span> Based on <span class="inline_math">\( H_k \)</span>, for any
+                <span class="inline_math">\( d_i &lt; k+1 \)</span> dividing <span class="inline_math">\( p-1 \)</span>,
+                there are exactly <span class="inline_math">\( \phi(d_i) \)</span> elements of order <span
+                    class="inline_math">\( d_i \)</span> in <span class="inline_math">\( (\mathbb Z / p \mathbb
+                    Z)^\times \)</span>.<span class="break"></span><span class="break"></span><span
+                    class="inline_math">\( k+1=d^* \)</span> divides <span class="inline_math">\( p-1 \)</span>.<span
+                    class="intersentencespace"></span> <span class="inline_math">\( x^{d^*}=1 \)</span> has <span
+                    class="inline_math">\( d^* \)</span> distinct roots mod p.<span class="intersentencespace"></span>
+                Clearly the order of the roots must divide <span class="inline_math">\( d^* \)</span>.<span
+                    class="intersentencespace"></span>
+                <div id="uid7" data-tralics-id="uid7" data-number="1" class="equation"> \begin{equation}
+                    d^{*}-\sum_{q | d^{*}, q&lt;d^*} \phi(q)=\phi(d^{*})
+                    \end{equation}
+                </div>
+                <p class="noindent">So there are exactly <span class="inline_math">\( \phi(k+1) \)</span> elements of
+                    order <span class="inline_math">\( k+1 \)</span> in <span class="inline_math">\( (\mathbb Z / p
+                        \mathbb Z)^\times \)</span>.<span class="intersentencespace"></span></p>
+            </li>
+        </ol>
+        <p>Overall, <span class="inline_math">\( H_{k+1} \)</span> is true.<span class="intersentencespace"></span></p>
+    </li>
+    <li>Based on M.I., <span class="inline_math">\( H_m \)</span> is true.<span class="intersentencespace"></span>
+    </li>
+</ol>
+
+<p style="text-align:right; font-size:1.5rem;">&#9723;</p>
