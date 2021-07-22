@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://beta.eurekz.com # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://eurekz.netlify.app # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : '' # does not include hostname
 title   : Eύρηκω
 tagline : The pleasure is mine.
@@ -133,7 +133,7 @@ comments:
     repository  : yonderz.github.io # GitHub repo
     owner       : Yonderz # GitHub repo owner
     admin: Yonderz
-    distractionFreeMode: false
+    distractionFreeMode: true
     proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 
   ## Valine
