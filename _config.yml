@@ -133,9 +133,7 @@ comments:
     repository  : yonderz.github.io # GitHub repo
     owner       : Yonderz # GitHub repo owner
     admin: Yonderz
-    distractionFreeMode: true
-    proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-
+  
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
