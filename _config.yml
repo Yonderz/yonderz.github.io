@@ -119,7 +119,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: #gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -133,7 +133,7 @@ comments:
     repository  : yonderz.github.io # GitHub repo
     owner       : Yonderz # GitHub repo owner
     admin: Yonderz
-    distractionFreeMode: true
+    distractionFreeMode: false
     proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 
   ## Valine
