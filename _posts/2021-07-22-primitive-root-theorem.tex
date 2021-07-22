@@ -1,0 +1,38 @@
+---
+mathjax: true
+title: Primitive root theorem
+tags: number-theory
+---
+\documentclass{article}
+%preamble
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Primitive root theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let p be a prime. Then for any d dividing $p-1$, there are exactly $\phi(d)$ elements of order d in $(\mathbb Z / p \mathbb Z)^\times$. In particular there are $\phi(p-1)$ primitive roots mod p.
+	\end{thm}
+	
+	\begin{proof}\
+		\begin{enumerate}
+			\item $H_m$: For any $d_i \leq m$ dividing $p-1$, there are exactly $\phi(d_i)$ elements of order $d_i$ in $(\mathbb Z / p \mathbb Z)^\times$.
+			\item $H_1$: Only positive divisor of $p-1$ less than 1 is 1. $H_1$ is obviously true.
+			\item $H_k$: Assume $H_m$ holds for some positive integer k.
+			\item $H_{k+1}$:\
+				\begin{enumerate}
+					\item $k+1$ doesn't divide $p-1$. Then $H_{k+1}$ is true since $H_k$ is true.
+					\item $k+1$ divides $p-1$. Based on $H_k$, for any $d_i < k+1$ dividing $p-1$, there are exactly $\phi(d_i)$ elements of order $d_i$ in $(\mathbb Z / p \mathbb Z)^\times$.\\\\ $k+1=d^*$ divides $p-1$. $x^{d^*}=1$ has $d^*$ distinct roots mod p. Clearly the order of the roots must divide $d^*$. 
+						\begin{equation}
+							d^{*}-\sum_{q | d^{*},  q<d^*} \phi(q)=\phi(d^{*})
+						\end{equation}
+						So there are exactly $\phi(k+1)$ elements of order $k+1$ in $(\mathbb Z / p \mathbb Z)^\times$.
+				\end{enumerate}
+				Overall, $H_{k+1}$ is true.
+			\item Based on M.I., $H_m$ is true.
+		\end{enumerate}
+	\end{proof}		
+\end{document}
