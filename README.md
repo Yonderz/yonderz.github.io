@@ -1,2 +1,2 @@
-# # [Eurekz](https://www.eurekz.com)
+# [Eurekz](https://www.eurekz.com)
 Personal Website
