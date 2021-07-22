@@ -7,12 +7,21 @@
 
 <script>
 MathJax = {
+  loader: { load: ["[tex]/ams"] },
   tex: {
-    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    tags: 'ams'
+      inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+      ],
+      displayMath: [
+          ["$$", "$$"],
+          ["\[", "\]"],
+          ["\\[", "\\]"],
+      ],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: "ams",
+      packages: { "[+]": ["ams"] },
   },
   svg: {
     fontCache: 'global'

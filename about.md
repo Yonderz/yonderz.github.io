@@ -23,6 +23,6 @@ titles:
   fr-FR   : *FR
   fr-LU   : *FR
   # @end locale config
-key: page-about
+key: beta-page-about
 ---
 Howdy!
