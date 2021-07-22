@@ -1,0 +1,65 @@
+---
+title:  "Steinitz exchange lemma"
+mathjax: true
+tags: linear-algebra
+aside:
+	toc: true
+---
+**Contents**
+* TOC
+{:toc}
+\documentclass{article}
+%preamble
+\usepackage{amsmath,amsthm,amssymb}
+\newtheorem*{thm}
+{Steinitz exchange lemma}
+\newtheorem{lem}{Lemma}
+\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+	If $\{v_1,\ldots,v_m\}$ is a set of \emph{linearly independent} vectors in vector space \textbf{V}, and $\{w_1,\ldots,w_n\}$ spans \textbf{V}, then:
+		\begin{enumerate}
+			\item{Possibly after reordering the $w_i$, $\{v_1,\ldots,v_m,w_{m+1},\ldots,w_n\}$ spans \textbf{V}.}
+			\item{$m\,\leq\,n$}
+		\end{enumerate}
+
+	\end{thm}
+
+	\begin{proof}\
+		\begin{enumerate}
+			\item $H_m$: Steinitz exchange lemma holds for all non-negative integers m.
+			\item $H_0$: Steinitz exchange lemma holds when $m=0$\\
+			$\emptyset$ is a set of \emph{linearly independent} vectors in vector space \textbf{V}. Based on the conditions given $\{w_1,\ldots,w_n\}$ spans \textbf{V}. And clearly, $m=0\leq n$
+			\item $H_k$: Steinitz exchange lemma holds for some non-negative integers $k$
+			\item $H_{k+1}$: Steinitz exchange lemma holds for $(k+1)$.\\
+			Based on $H_k$, $\{v_1,\ldots,v_k,w_{k+1},\ldots,w_n\}$ spans \textbf{V}.
+			$$
+				v_{k+1}\in \textbf{V}\Leftrightarrow v_{k+1}=\sum_{i=1}^k{\lambda_i v_i}+\sum_{i=k+1}^n{\lambda_i w_i}
+			$$
+				Since $v_1,\ldots,v_{k+1}$ are linearly independent,
+				\begin{align*}
+					\Rightarrow &v_{k+1}-\sum_{i=1}^k{\lambda_i v_i}\neq0\\
+					\Rightarrow &v_{k+1}\neq\sum_{i=1}^k{\lambda_i v_i}\\
+					\Rightarrow &\text{At least one of }\lambda_{k+1},\ldots\lambda_n~\text{is non-zero}
+				\end{align*}
+				Rearrange $w_i$ so that $\lambda_{k+1}\neq0$
+				\begin{align*}
+					\Rightarrow &v_{k+1}=\sum_{i=1}^k{\lambda_i v_i}+\lambda_{k+1}w_{k+1}+\sum_{i=k+2}^n{\lambda_i w_i}\\
+					\Leftrightarrow &w_{k+1}=\frac{1}{-\lambda_{k+1}}(\sum_{i=1}^k{\lambda_i v_i}-v_{k+1}+\sum_{i=k+2}^n{\lambda_i w_i})
+				\end{align*}
+				$\forall v\in$\textbf{V}, $\exists$ a linear combination of$~\{v_1,\ldots,v_k,w_{k+1},\ldots,w_n\}=v$\\
+				Now we substitute $w_{k+1}=\frac{1}{-\lambda_{k+1}}(\sum_{i=1}^k{\lambda_i v_i}-v_{k+1}+\sum_{i=k+2}^n{\lambda_i w_i})$ into the  linear combination.\\
+				$\Rightarrow\forall v\in$\textbf{V}, $\exists$ a linear combination of$~\{v_1,\ldots,v_k,v_{k+1},w_{k+2},\ldots,w_n\}=v$\\
+				Therefore $H_{k+1}$ holds, if $H_k$ is true.
+				
+			
+			\item Based on \emph{M.I.}, $H_m$ is true.
+
+		\end{enumerate}
+				
+		
+	\end{proof}
+			
+\end{document}
