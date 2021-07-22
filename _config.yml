@@ -183,7 +183,7 @@ analytics:
 ##############################
 markdown    : GFM
 highlighter : rouge
-permalink   : /post/:year/:short_month/:title
+permalink   : /post/:year/:title
 
 exclude:
   - CHANGELOG.md
