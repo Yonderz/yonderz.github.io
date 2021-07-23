@@ -2,6 +2,6 @@
 blockquote.statement{
     font-size: map-get($base, font-size);
     color: $text-color;
-    @include split-line(left, 4px, $text-color);
+    @include split-line(left, 4px, $text-color-l);
 }
 /* end custom scss snippet */
