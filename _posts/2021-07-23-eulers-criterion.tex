@@ -1,0 +1,41 @@
+---
+title: Euler's Criterion
+mathjax: true
+tags: number-theory
+---
+\documentclass{article}
+%preamble
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Euler's Criterion}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let p be an odd prime, and a an integer not divisible by p. Then $$a^{\frac{p-1}{2}}\equiv \frac{a}{p}\mod p$$
+	\end{thm}	
+	
+	\begin{proof} \
+		\begin{enumerate}
+			\item $\frac{a}{p}=1$, i.e. $\exists d : d^2 \equiv a \mod p$
+				$$\implies a^{\frac{p-1}{2}} \equiv d^{p-1} \equiv 1 \mod p$$
+			\item $\frac{a}{p}=-1$, i.e. $\forall d : d^2 \not\equiv a \mod p$\\
+				since p is a prime, $\exists g \in (\mathbb Z/p\mathbb Z)^\times:(\mathbb Z/p\mathbb Z)^\times= <g>\implies a=g^{2n+1}$\\
+				$$\implies a^{\frac{p-1}{2}} \equiv g^{\frac{(2n+1)(p-1)}{2}}\equiv g^{n(p-1)+\frac{p-1}{2}} \equiv g^\frac{p-1}{2} \mod p$$
+				since p is a prime
+				\begin{align*}
+					&\implies (g^\frac{p-1}{2})^2 \equiv 1 \mod p \\
+					&\implies g^\frac{p-1}{2}\equiv1 \mod p \lor g^\frac{p-1}{2}\equiv-1 \mod p
+				\end{align*}
+				since g is a generator
+				\begin{align*}
+					&\implies g^\frac{p-1}{2}\not\equiv1 \mod p\\
+					&\implies g^\frac{p-1}{2} \equiv -1 \mod p
+				\end{align*} 
+ 		\end{enumerate}
+ 		Therefore, this theorem is true.
+	\end{proof}
+			
+\end{document}
