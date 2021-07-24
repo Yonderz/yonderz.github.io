@@ -28,7 +28,8 @@
       <div>
         {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
         {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }},
+        {%- assign _github_path = site.repository | append: '/tree/' | append: site.repository_tree | append: '/' | append: _article_path | replace:'//','/' -%}
+        © <a title="Eurekz GitHub Repository" href="https://github.com/{{ _github_path }}">{{ site.title }}</a> {{ _locale_copyright_dates }},
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
