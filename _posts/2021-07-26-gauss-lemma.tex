@@ -1,0 +1,55 @@
+---
+title: Gauss's lemma
+mathjax: true
+tags: number-theory
+---
+\documentclass{article}
+%preamble
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Gauss's lemma}
+\newtheorem*{cor}{Corollary}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let p be an odd prime, q be an integer coprime to p. Take the least residues of $Q=\{q, 2q,\cdots,\frac{p-1}{2} q \}$, i.e. reduce them to integers in $[0, p-1]$. Let u be the number of members in this set that are greater than p/2. Then
+		$$
+		(\frac{q}{p})=-1^u
+		$$
+	\end{thm}
+	
+	\begin{proof}
+		Q has exactly $\frac{p-1}{2}$ elements since $(p, q)=1$ and $p$ is a prime.We can rewrite Q to integers in $[-\frac{p-1}{2},\frac{p-1}{2}]$ by rewriting all $[o_i]_p : o_i>\frac{p-1}{2}$ into  $[-u_i]_p : u_i=p-o_i \land u_i\leq \frac{p-1}{2}$.
+		\begin{align*}
+		&\implies \prod_{t=1}^{\frac{p-1}{2}}tq\equiv q^{\frac{p-1}{2}}\cdot {\frac{p-1}{2}}!\equiv{\frac{p-1}{2}}! \cdot (-1)^u \mod p \\
+		&\implies (\frac{q}{p}) \equiv q^{\frac{p-1}{2}} \equiv (-1)^u \mod p \tag*{(By Euler's Criterion)}
+		\end{align*}
+	\end{proof}
+	
+	\begin{cor}
+		Let p be an odd prime. Then
+		\begin{equation*}
+			(\frac{2}{p})=
+				\begin{cases}
+					1 & \text{if } p\equiv1 \lor 7 \mod 8 \\
+					-1 & \text{if } p\equiv3 \lor 5 \mod 8
+				\end{cases}
+		\end{equation*}	
+	\end{cor}
+	
+	\begin{proof}
+		Because $2\cdot\frac{p-1}{2}=p-1<p$, we only need to find out the cut-off point 
+		$$
+		n:2n\leq\frac{p-1}{2} \land 2(n+1)>\frac{p-1}{2} \implies n=[\frac{p-1}{4}] \implies u=\frac{p-1}{2}-n=\lceil \frac{p-1}{4} \rceil
+		$$
+		\begin{enumerate}
+			\item $p=8k+1 \implies u=\lceil \frac{8k}{4} \rceil=2k \implies (\frac{p-1}{2})=1$
+			\item $p=8k+3 \implies u=\lceil \frac{8k+2}{4} \rceil=2k+1 \implies (\frac{p-1}{2})=-1$
+			\item $p=8k+5 \implies u=\lceil \frac{8k+4}{4} \rceil=2k+1 \implies (\frac{p-1}{2})=-1$
+			\item $p=8k+7 \implies u=\lceil \frac{8k+6}{4} \rceil=2k+2 \implies (\frac{p-1}{2})=1$
+		\end{enumerate}
+	\end{proof}
+		
+\end{document}
