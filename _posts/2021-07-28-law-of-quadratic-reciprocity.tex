@@ -1,0 +1,62 @@
+---
+title: Law of Quadratic Reciprocity
+mathjax: true
+tags: number-theory
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Law of Quadratic Reciprocity}
+%\newtheorem{claim}[lem]{Claim}
+%\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+	 	Let p and q be odd primes. Then
+	 	$$
+	 	\left( \frac { p } { q } \right) \left( \frac { q } { p } \right) = ( - 1 ) ^ { \frac { p - 1 } { 2 } \frac { q - 1 } { 2 } }
+	 	\iff
+	 	\begin{cases}
+	 		(\frac{p}{q})=(\frac{q}{p}) &\text{if either p or q is }1\bmod 4\\
+	 		(\frac{p}{q})=-(\frac{q}{p}) &\text{if both p and q are }3\bmod 4
+	 	\end{cases}
+	 	$$ 	
+	\end{thm}
+	\begin{proof}
+		Note the ring isomorphism $\mathbb{Z}_{pq}^{*} \cong \mathbb{Z}_{p}^* \times \mathbb{Z}_{q}^*$. Clearly they are also commutative ring, consider the quotient group $G=\frac{\mathbb{Z}_{p}^* \times \mathbb{Z}_{q}^*}{ U }$ under multiplication, where $U=\{ (1,1),(-1,-1) \}$. $|G|=\frac{(p-1)(q-1)}{2}$
+
+		Under $\mathbb{Z}_{p}^* \times \mathbb{Z}_{q}^*$ :		
+		$$G=xU \text{ where } x \in X=\{ x_1 \times x_2 = (x_1,x_2) : 1\leq x_1 \leq p-1\ \land 1\leq x_2 \leq \frac{q-1}{2} \}$$
+		
+		Under $\mathbb{Z}_{pq}^{*}$ :
+		\begin{align*}
+			G &= y\{ 1, -1 \} \text{ where } y \in \{ (y,pq)=1 \land 1\leq y \leq \frac{pq-1}{2} \} \\
+		\iff G &= zU \text{ where } z\in Z=\{ (z_1,z_2) : z_1 \equiv y \bmod p \land z_2 \equiv y \bmod q \}
+		\end{align*}
+		\begin{align*}
+			\prod_{g\in G} &= ({(p-1)!}^{\frac{q-1}{2}}\ , \ {\frac{q-1}{2}!}^{(p-1)})U\\
+						   &= ((-1)^{\frac{q-1}{2}}\ , \ {\frac{q-1}{2} !}^{2 \cdot \frac{p-1}{2}})U\\
+						   &= ((-1)^{\frac{q-1}{2}}\ , \ (-1)^{\frac{p-1}{2}}\cdot (-1)^{\frac{p-1}{2}\cdot \frac{q-1}{2}})U\\
+						   &= (\frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}}\ , \ \frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}})U
+		\end{align*}
+		Note:	
+		\begin{align*}
+			&\quad \frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}}\\
+			&\equiv \frac{\left( \prod _ { i = 1 } ^ { p - 1 } i \right) \left( \prod _ { i = 1 } ^ { p - 1 } p + i \right) \cdots \left( \prod _ { i = 1 } ^ { p - 1 } \left( \frac { q - 1 } { 2 } - 1 \right) p + i \right) \left( \prod _ { i = 1 } ^ { \frac { p - 1 } { 2 } } \frac { q - 1 } { 2 } p + i \right)}{\frac{p-1}{2}!\cdot q^\frac{p-1}{2}}\\
+			&\equiv \frac{(-1)^{\frac{q-1}{2}}\cdot \frac{p-1}{2}!}{\frac{p-1}{2}!\cdot q^\frac{p-1}{2}}\\
+			&\equiv (-1)^{\frac{q-1}{2}}\cdot q^\frac{p-1}{2} \\
+			&\equiv (-1)^{\frac{q-1}{2}} \cdot (\frac{q}{p}) \mod p
+		\end{align*}
+		
+		$$
+		\implies \prod_{g\in G}=((-1)^{\frac{q-1}{2}} \cdot (\frac{q}{p})\ ,\ (-1)^{\frac{p-1}{2}} \cdot (\frac{p}{q}))U
+		$$
+		$(a_1,a_2)U=(a_3,a_4)U \implies a_1a_2 \equiv a_3a_4 \mod pq$
+		\begin{align*}
+		&\implies (-1)^{\frac{p-1}{2}} \cdot(-1)^{\frac{q-1}{2}} \cdot \left( \frac { p } { q } \right) \left( \frac { q } { p } \right) \equiv (-1)^{\frac{p-1}{2}} \cdot(-1)^{\frac{q-1}{2}} \cdot ( - 1 ) ^ { \frac { p - 1 } { 2 } \frac { q - 1 } { 2 } } \mod pq\\
+		&\implies \left( \frac { p } { q } \right) \left( \frac { q } { p } \right) = ( - 1 ) ^ { \frac { p - 1 } { 2 } \frac { q - 1 } { 2 } }
+		\end{align*}		
+	\end{proof}	
+\end{document}
