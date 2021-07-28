@@ -1,0 +1,70 @@
+title: Law of Quadratic Reciprocity
+mathjax: true
+tags: number-theory
+key: 2021-07-28-law-of-quadratic-reciprocity
+---
+<blockquote class="statement">
+    <p><strong>Law of Quadratic Reciprocity</strong> Let p and q be odd primes.<span class="intersentencespace"></span>
+        Then</p>
+    <div class="equation">\[
+        \left( \frac { p } { q } \right) \left( \frac { q } { p } \right) = ( - 1 ) ^ { \frac { p - 1 } { 2 } \frac { q
+        - 1 } { 2 } }
+        \iff
+        \begin{cases}
+        (\frac{p}{q})=(\frac{q}{p}) &amp;\text{if either p or q is }1\bmod 4\\
+        (\frac{p}{q})=-(\frac{q}{p}) &amp;\text{if both p and q are }3\bmod 4
+        \end{cases}
+        \]
+    </div>
+</blockquote>
+<!--more-->
+<p><em>Proof. </em>Note the ring isomorphism <span class="inline_math">\( \mathbb{Z}_{pq}^{*} \cong \mathbb{Z}_{p}^* \times
+        \mathbb{Z}_{q}^* \)</span>.<span class="intersentencespace"></span> Clearly they are also commutative ring,
+    consider the quotient group <span class="inline_math">\( G=\frac{\mathbb{Z}_{p}^* \times \mathbb{Z}_{q}^*}{ U }
+        \)</span> under multiplication, where <span class="inline_math">\( U=\{ (1,1),(-1,-1) \} \)</span>.<span
+        class="intersentencespace"></span> <span class="inline_math">\( |G|=\frac{(p-1)(q-1)}{2} \)</span></p>
+<p>Under <span class="inline_math">\( \mathbb{Z}_{p}^* \times \mathbb{Z}_{q}^* \)</span> :</p>
+<div class="equation">\[ G=xU \text{ where } x \in X=\{ x_1 \times x_2 = (x_1,x_2) : 1\leq x_1 \leq p-1\ \land 1\leq x_2
+    \leq \frac{q-1}{2} \} \]
+</div>
+<p class="noindent">Under <span class="inline_math">\( \mathbb{Z}_{pq}^{*} \)</span> :</p>
+<div id="uid1" data-tralics-id="uid1" data-number="1" class="equation"> \begin{align*}
+    G &amp;= y\{ 1, -1 \} \text{ where } y \in \{ (y,pq)=1 \land 1\leq y \leq \frac{pq-1}{2} \} \\
+    \iff G &amp;= zU \text{ where } z\in Z=\{ (z_1,z_2) : z_1 \equiv y \bmod p \land z_2 \equiv y \bmod q \}
+    \end{align*}
+</div>
+<div id="uid2" data-tralics-id="uid2" data-number="2" class="equation"> \begin{align*}
+    \prod_{g\in G} &amp;= ({(p-1)!}^{\frac{q-1}{2}}\ , \ {\frac{q-1}{2}!}^{(p-1)})U\\
+    &amp;= ((-1)^{\frac{q-1}{2}}\ , \ {\frac{q-1}{2} !}^{2 \cdot \frac{p-1}{2}})U\\
+    &amp;= ((-1)^{\frac{q-1}{2}}\ , \ (-1)^{\frac{p-1}{2}}\cdot (-1)^{\frac{p-1}{2}\cdot \frac{q-1}{2}})U\\
+    &amp;= (\frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}}\ , \
+    \frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}})U
+    \end{align*}
+</div>
+<p class="noindent">Note:</p>
+<div id="uid3" data-tralics-id="uid3" data-number="3" class="equation"> \begin{align*}
+    &amp;\quad \frac{(({pq-1})/{2})!}{\frac{p-1}{2}!\cdot \frac{q-1}{2}!\cdot p^\frac{q -1}{2}\cdot q^\frac{p-1}{2}}\\
+    &amp;\equiv \frac{\left( \prod _ { i = 1 } ^ { p - 1 } i \right) \left( \prod _ { i = 1 } ^ { p - 1 } p + i \right)
+    \cdots \left( \prod _ { i = 1 } ^ { p - 1 } \left( \frac { q - 1 } { 2 } - 1 \right) p + i \right) \left( \prod _ {
+    i = 1 } ^ { \frac { p - 1 } { 2 } } \frac { q - 1 } { 2 } p + i \right)}{\frac{p-1}{2}!\cdot q^\frac{p-1}{2}}\\
+    &amp;\equiv \frac{(-1)^{\frac{q-1}{2}}\cdot \frac{p-1}{2}!}{\frac{p-1}{2}!\cdot q^\frac{p-1}{2}}\\
+    &amp;\equiv (-1)^{\frac{q-1}{2}}\cdot q^\frac{p-1}{2} \\
+    &amp;\equiv (-1)^{\frac{q-1}{2}} \cdot (\frac{q}{p}) \mod p
+    \end{align*}
+</div>
+<div class="equation">\[
+    \implies \prod_{g\in G}=((-1)^{\frac{q-1}{2}} \cdot (\frac{q}{p})\ ,\ (-1)^{\frac{p-1}{2}} \cdot (\frac{p}{q}))U
+    \]
+</div>
+<p class="noindent">
+    <span class="inline_math">\( (a_1,a_2)U=(a_3,a_4)U \implies a_1a_2 \equiv a_3a_4 \mod pq \)</span>
+</p>
+<div id="uid4" data-tralics-id="uid4" data-number="4" class="equation"> \begin{align*}
+    &amp;\implies (-1)^{\frac{p-1}{2}} \cdot(-1)^{\frac{q-1}{2}} \cdot \left( \frac { p } { q } \right) \left( \frac { q
+    } { p } \right) \equiv (-1)^{\frac{p-1}{2}} \cdot(-1)^{\frac{q-1}{2}} \cdot ( - 1 ) ^ { \frac { p - 1 } { 2 } \frac
+    { q - 1 } { 2 } } \mod pq\\
+    &amp;\implies \left( \frac { p } { q } \right) \left( \frac { q } { p } \right) = ( - 1 ) ^ { \frac { p - 1 } { 2 }
+    \frac { q - 1 } { 2 } }
+    \end{align*}
+</div>
+{% include qed.html %}
