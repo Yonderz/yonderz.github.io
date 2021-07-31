@@ -3,6 +3,7 @@ title: Euler's Φ Function
 aside:
     toc: true
 tags: number-theory
+mathjax: true
 ---
 # Definition
 $\phi(n)$ is the number of integers between 0 and n-1 who is coprime with n.
