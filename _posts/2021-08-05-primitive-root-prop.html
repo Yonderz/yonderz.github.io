@@ -1,0 +1,42 @@
+---
+title: Primitive root proposition
+mathjax: true
+tags: number-theory
+key: 2021-08-05-primitive-root-prop
+---
+<blockquote class="statement">
+    <p><strong>Proposition</strong> a is a primitive root modulo n then it is also a primitive root modulo d, for any d
+        dividing n.<span class="intersentencespace"></span></p>
+</blockquote>
+<!--more-->
+<p>Claim: The map <span class="inline_math">\( \mathbb{Z}_{n}^{*} \rightarrow \mathbb{Z}_{d}^* \)</span> is
+    surjective.<span class="intersentencespace"></span> <span class="inline_math">\( d=\prod p_i^{r_{di}} , \ n=\prod
+        p_i^{r_{fi}} \cdot \prod q_i^{r_{gi}} \)</span> where <span class="inline_math">\( p_i, q_i \)</span> are all
+    distinct prime.<span class="intersentencespace"></span> Set <span class="inline_math">\( f=\prod p_i^{r_{fi}} , \
+        g=\prod q_i^{r_{gi}} \)</span> then <span class="inline_math">\( n=fg \)</span>.</p>
+<p>Note <span class="inline_math">\( (d,g)=1 \implies \exists x \in \mathbb{N} : xd\equiv 1 \bmod g \)</span>.<span
+        class="intersentencespace"></span> For any <span class="inline_math">\( [i]_g \in \mathbb{Z}_{d}^* \)</span>,
+    <span class="inline_math">\( i\equiv u \bmod g \)</span> where <span class="inline_math">\( u\in [0, g-1]
+        \)</span>.<span class="intersentencespace"></span></p>
+<div class="equation">\[
+    \implies i+(g-u+1)xd \equiv u+g-u+1 \equiv 1 \mod g
+    \]
+</div>
+<p class="noindent"><span class="inline_math">\( (g-u+1)x \equiv k \mod g \)</span> where <span class="inline_math">\( k
+        \in [0, g-1] \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( \implies i+kd\equiv
+        1 \mod g \implies (i+kd,g)=1 \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\(
+        \forall p_i : p_i \mid f \)</span>, <span class="inline_math">\( p_i \nmid (i+kd) \)</span> since <span
+        class="inline_math">\( (i, p_i)=1 \land pi\mid kd \)</span>.<span class="intersentencespace"></span></p>
+<div id="uid1" data-tralics-id="uid1" data-number="1" class="equation"> \begin{align*}
+    &amp;\implies (i+kd, f)=1 \land (i+kd, g)=1 \\
+    &amp;\implies (i+kd, fg)=1 \\
+    &amp;\implies (i+kd) \in \mathbb{Z}_{n}^{*}
+    \end{align*}
+</div>
+<p class="noindent">Since <span class="inline_math">\( \mathbb{Z}_{n}^{*}=&lt;[a]_n&gt; \)</span> and the map <span
+        class="inline_math">\( \mathbb{Z}_{n}^{*} \rightarrow \mathbb{Z}_{d}^* \)</span> is surjective.<span
+        class="intersentencespace"></span></p>
+<div class="equation">\[ \implies \forall [i]_g \in \mathbb{Z}_{d}^* ,\ [i]_g\equiv [a^t]_g \]
+</div>
+<p class="noindent">Therefore, a is a primitive root modulo d.
+    {% include qed.html %}
