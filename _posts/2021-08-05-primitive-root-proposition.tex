@@ -1,0 +1,37 @@
+---
+title: Primitive root proposition
+tags: number-theory
+mathjax: true
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{prop}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{prop}
+		a is a primitive root modulo n then it is also a primitive root modulo d, for any d dividing n.
+	\end{prop}
+	\begin{proof}
+		Claim: The map $\mathbb{Z}_{n}^{*} \rightarrow \mathbb{Z}_{d}^*$  is surjective. $d=\prod p_i^{r_{di}} , \  n=\prod p_i^{r_{fi}} \cdot \prod q_i^{r_{gi}}$ where $p_i, q_i$ are all distinct prime. Set $f=\prod p_i^{r_{fi}} , \  g=\prod q_i^{r_{gi}}$ then $n=fg$.
+		
+		Note $(d,g)=1 \implies \exists x \in \mathbb{N} : xd\equiv 1 \bmod g$. For any $ [i]_g \in \mathbb{Z}_{d}^*$, $i\equiv u \bmod g$ where $u\in [0, g-1]$.
+		$$
+			\implies i+(g-u+1)xd \equiv u+g-u+1 \equiv 1 \mod g
+		$$
+		$ (g-u+1)x \equiv k \mod g  $ where $k \in [0, g-1]$. $\implies i+kd\equiv 1 \mod g \implies (i+kd,g)=1$. $\forall p_i : p_i \mid f$, $p_i \nmid (i+kd)$ since $(i, p_i)=1 \land pi\mid kd$.
+		\begin{align*}
+			&\implies (i+kd, f)=1 \land (i+kd, g)=1	\\
+			&\implies (i+kd, fg)=1 \\
+			&\implies (i+kd) \in \mathbb{Z}_{n}^{*}
+		\end{align*}
+		Since $\mathbb{Z}_{n}^{*}=<[a]_n>$ and the map $\mathbb{Z}_{n}^{*} \rightarrow \mathbb{Z}_{d}^*$  is surjective. 
+		$$\implies  \forall [i]_g \in \mathbb{Z}_{d}^* ,\ [i]_g\equiv [a^t]_g$$
+		Therefore, a is a primitive root modulo d.		
+	\end{proof}
+\end{document}
