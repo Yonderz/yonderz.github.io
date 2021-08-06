@@ -1,0 +1,68 @@
+---
+title: Fermat's Two-Square Theorem
+mathjax: true
+tags: number-theory
+excerpt: Every prime congruent to $1 \bmod 4$ is the sum of two squares.
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Fermat's Two-Square Theorem}
+\newtheorem{prop}{Proposition}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{prop}[Diophantus identity] \label{Diophantus identity}
+		The product of two numbers, each of which is a sum of two squares, is itself a sum of two squares.
+	\end{prop}
+	\begin{proof}
+		\begin{align*}
+			(a^2+b^2)\cdot (c^2+d^2) &= a^2c^2+b^2d^2+a^2d^2+b^2c^2 \\
+			&= a^2c^2+2abcd+b^2d^2+a^2d^2-2abcd+b^2c^2 \\
+			&= (ac+bd)^2+(ad-bc)^2
+		\end{align*}
+	\end{proof}
+
+	\begin{prop} \label{Red}
+		 Suppose we have $a^2 + b^2 = rp$, with a, b integers, $ab\neq0$, and $1 < r < p$. Then there exists $1 \leq r' < r$ and integers x, y such that $x^2 + y^2 = r'p$.
+	\end{prop}
+	\begin{proof}
+		Find $u\equiv a \bmod r , v\equiv b \bmod r$ where $u,v \in [\frac{-r}{2},\frac{r}{2}]$. 
+		
+		$u^2+v^2 \equiv rp \equiv 0 \mod r \implies u^2+v^2=r' r$
+				
+		$0<u^2+v^2 \leq \frac{r^2}{4} + \frac{r^2}{4}=\frac{r^2}{2} \implies 1 \leq r'\leq \frac{r}{2} < r$
+		
+		Based on \hyperref[Diophantus identity]{Diophantus identity}
+		\begin{align*}
+			r^2r'p &= (a^2+b^2)\cdot(u^2+v^2)\\
+					&= (au+bv)^2 + (av-bu)^2
+		\end{align*} 
+		$au+bv \equiv a^2+b^2 \equiv 0 \mod r \implies r^2 \mid (au+bv)^2$
+		
+		$av-bu \equiv ab-ba \equiv 0 \mod r \implies r^2 \mid (av-bu)^2$
+		
+		Thus
+		\begin{equation*}
+			r'p=\frac{r^2r'p}{r^2}=(\frac{au+bv}{r})^2 + (\frac{av-bu}{r})^2
+		\end{equation*}
+	\end{proof}
+
+	\begin{thm}
+		Every prime congruent to $1 \bmod 4$ is the sum of two squares.
+	\end{thm}
+	\begin{proof}
+		Based on Euler's Criterion, $[-1]_p$ is a quadratic residue. 
+		
+		$\implies \exists d \in [-\frac{p-1}{2},\frac{p-1}{2}] : p \mid (d^2+1)$ 
+		
+		$0<d^2+1<\frac{p^2}{4}+1 \leq \frac{p^2}{2} \implies \exists r \in (0, p) : d^2+1^2=rp$
+		
+		If $r=1$, then $p=d^2+1^2$.
+		
+		If $r>1$, based on \hyperref[Red]{Proposition 2} we can keep reducing $rp$ to $r'p$ which is still sum of two squares until $r'$ is reduced to 1. Then $r'p=p=x^2+y^2$ 
+	\end{proof}		
+\end{document}
