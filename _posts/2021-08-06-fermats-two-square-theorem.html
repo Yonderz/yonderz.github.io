@@ -1,0 +1,75 @@
+---
+title: Fermat’s Two-Square Theorem
+mathjax: true
+tags: number-theory
+key: 2021-08-06-fermats-two-square-theorem
+excerpt: <blockquote class="statement"><p class="noindent"><strong>Fermat’s Two-Square Theorem</strong> Every prime congruent to <span class="inline_math">\( 1 \bmod 4 \)</span> is the sum of two squares.<span class="intersentencespace"></span></p></blockquote>
+---
+<blockquote class="statement">
+    <p id="Diophantus identity" data-tralics-id="uid1" data-number=""><strong>Proposition 1 (Diophantus identity)</strong>
+    
+        The product of two numbers, each of which is a sum of two squares, is itself a sum of two squares.<span
+            class="intersentencespace"></span></p>
+</blockquote>
+<p><em>Proof. </em></p>
+<div id="uid2" data-tralics-id="uid2" data-number="1" class="equation"> \begin{align*}
+    (a^2+b^2)\cdot (c^2+d^2) &amp;= a^2c^2+b^2d^2+a^2d^2+b^2c^2 \\
+    &amp;= a^2c^2+2abcd+b^2d^2+a^2d^2-2abcd+b^2c^2 \\
+    &amp;= (ac+bd)^2+(ad-bc)^2
+    \end{align*}
+</div>
+<blockquote class="statement">
+    <p id="Red" data-tralics-id="uid3" data-number="" class="noindent"><strong>Proposition 2</strong>
+    
+        Suppose we have <span class="inline_math">\( a^2 + b^2 = rp \)</span>, with a, b integers, <span
+            class="inline_math">\( ab\neq0 \)</span>, and <span class="inline_math">\( 1 &lt; r &lt; p \)</span>.<span
+            class="intersentencespace"></span> Then there exists <span class="inline_math">\( 1 \leq r' &lt; r \)</span> and
+        integers x, y such that <span class="inline_math">\( x^2 + y^2 = r'p \)</span>.<span
+            class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em>Find <span class="inline_math">\( u\equiv a \bmod r , v\equiv b \bmod r \)</span> where <span class="inline_math">\(
+        u,v \in [\frac{-r}{2},\frac{r}{2}] \)</span>.</p>
+<p>
+    <span class="inline_math">\( u^2+v^2 \equiv rp \equiv 0 \mod r \implies u^2+v^2=r' r \)</span>
+</p>
+<p>
+    <span class="inline_math">\( 0&lt;u^2+v^2 \leq \frac{r^2}{4} + \frac{r^2}{4}=\frac{r^2}{2} \implies 1 \leq r'\leq
+        \frac{r}{2} &lt; r \)</span>
+</p>
+<p>Based on <a href="#Diophantus identity" class="hyperref">Diophantus identity</a></p>
+<div id="uid4" data-tralics-id="uid4" data-number="2" class="equation"> \begin{align*}
+    r^2r'p &amp;= (a^2+b^2)\cdot(u^2+v^2)\\
+    &amp;= (au+bv)^2 + (av-bu)^2
+    \end{align*}
+</div>
+<p class="noindent">
+    <span class="inline_math">\( au+bv \equiv a^2+b^2 \equiv 0 \mod r \implies r^2 \mid (au+bv)^2 \)</span>
+</p>
+<p>
+    <span class="inline_math">\( av-bu \equiv ab-ba \equiv 0 \mod r \implies r^2 \mid (av-bu)^2 \)</span>
+</p>
+<p>Thus</p>
+<div id="uid5" data-tralics-id="uid5" data-number="3" class="equation"> \begin{equation*}
+    r'p=\frac{r^2r'p}{r^2}=(\frac{au+bv}{r})^2 + (\frac{av-bu}{r})^2
+    \end{equation*}
+</div>
+<blockquote class="statement">
+    <p class="noindent"><strong>Fermat’s Two-Square Theorem</strong> Every prime congruent to <span class="inline_math">\( 1
+            \bmod 4 \)</span> is the sum of two squares.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em>Based on <a href="https://www.eurekz.com/post/2021/eulers-criterion " target="_blank">Euler’s Criterion</a>, <span class="inline_math">\( [-1]_p \)</span> is a quadratic residue.</p>
+<p>
+    <span class="inline_math">\( \implies \exists d \in [-\frac{p-1}{2},\frac{p-1}{2}] : p \mid (d^2+1) \)</span>
+</p>
+<p>
+    <span class="inline_math">\( 0&lt;d^2+1&lt;\frac{p^2}{4}+1 \leq \frac{p^2}{2} \implies \exists r \in (0, p) :
+        d^2+1^2=rp \)</span>
+</p>
+<p>If <span class="inline_math">\( r=1 \)</span>, then <span class="inline_math">\( p=d^2+1^2 \)</span>.</p>
+<p>If <span class="inline_math">\( r&gt;1 \)</span>, based on <a href="#Red" class="hyperref">Proposition 2</a> we can
+    keep reducing <span class="inline_math">\( rp \)</span> to <span class="inline_math">\( r'p \)</span> which is still
+    sum of two squares until <span class="inline_math">\( r' \)</span> is reduced to 1.<span
+        class="intersentencespace"></span> Then <span class="inline_math">\( r'p=p=x^2+y^2 \)</span></p>
+        {% include qed.html %}
