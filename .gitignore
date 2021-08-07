@@ -1,2 +1,3 @@
 .DS_Store
 urlslug.py
+__pycache__
