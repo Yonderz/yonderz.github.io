@@ -13,4 +13,4 @@ tags: latex
 | `\qquad`   | twice of \quad (= 36 mu)                       |
 
 
-<footnote><a href="https://www.overleaf.com/learn/latex/Spacing_in_math_mode">https://www.overleaf.com/learn/latex/Spacing_in_math_mode</a></footnote>
+<div class="footnotes"><a href="https://www.overleaf.com/learn/latex/Spacing_in_math_mode">https://www.overleaf.com/learn/latex/Spacing_in_math_mode</a></div>
