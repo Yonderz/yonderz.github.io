@@ -1,12 +1,5 @@
 @mixin horizontal-rules() {
-  &::before {
-    display: block;
-    font-size: map-get($base, font-size-h2);
-    color: $text-color-l;
-    text-align: center;
-    letter-spacing: map-get($spacers, 4);
-    content: "...";
-  }
+  border-bottom: 1px double $text-color-l;
 }
 
 .horizontal-rules {
