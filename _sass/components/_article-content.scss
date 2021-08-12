@@ -39,8 +39,9 @@
     @include split-line(bottom);
   }
   hr {
-    border: none;
-    @include horizontal-rules();
+    @include split-line(bottom, 2px, default);
+    margin-top: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 4);
   }
   blockquote {
     padding-left: map-get($spacers, 3);
