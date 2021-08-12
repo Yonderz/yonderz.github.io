@@ -1,0 +1,35 @@
+---
+title: Euclidean domain Z[i]
+mathjax: true
+tags: number-theory
+excerpt: The ring Z[i] is a Euclidean domain.
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{prop}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{prop}
+		The ring $\mathbb Z[i]$ is a Euclidean domain.
+	\end{prop}
+			
+	\begin{proof}
+		Assume $\exists a,b,c,d \in \mathbb Z : abcd \neq 0\, \land \, (a+bi)\cdot (c+di)=0 \\ \implies (ac-bd)+(ad+bc)i=0 \implies ac-bd=0 \, \land \, ad+bc=0 \\ \implies \frac dc = \frac ab = -\frac cd \implies c^2=-d^2 \implies c=d=0 $
+		
+		Contradict with the assumption therefore $\mathbb Z[i]$ is an integral domain. 
+		
+		$\forall a,b \in \mathbb Z[i]$ (WLOG, assume $|a| \leq |b|$) $\exists c=c_1+c_2i \in  \mathbb C : ac=b \, \land \, c_1,c_2 \in \mathbb R$ 
+		
+		Set $q=q_1+q_2i \in \mathbb Z[i]: |q_1-c_1|\leq 1/2 \, \land \, |q_2-c_2|\leq 1/2$ 
+		$$
+		|q_1-c_1|^2+|q_2-c_2|^2< 1 \implies |c-q|<1 \implies |{b}/{a}-q| \leq 1 \implies |b-aq|\leq |a|
+		$$ 
+		Thus, $\mathbb Z[i]$ is a Euclidean domain.
+	\end{proof}
+\end{document}
