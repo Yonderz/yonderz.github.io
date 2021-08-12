@@ -1,8 +1,8 @@
 ---
-title: Euclidean domain $Z[i]$
+title: Euclidean domain $\mathbb Z[i]$
 mathjax: true
 tags: number-theory
-excerpt: The ring $Z[i]$ is a Euclidean domain.
+excerpt: The ring $\mathbb Z[i]$ is a Euclidean domain.
 ---
 \documentclass{article}
 %preamble
@@ -31,9 +31,11 @@ excerpt: The ring $Z[i]$ is a Euclidean domain.
 		$\forall a,b \in \mathbb Z[i]$ (WLOG, assume $|a| \leq |b|$) $\exists c=c_1+c_2i \in  \mathbb C : ac=b \, \land \, c_1,c_2 \in \mathbb R$ 
 		
 		Set $q=q_1+q_2i \in \mathbb Z[i]: |q_1-c_1|\leq 1/2 \, \land \, |q_2-c_2|\leq 1/2$ 
-		$$
+		
+		$
 		|q_1-c_1|^2+|q_2-c_2|^2< 1 \implies |c-q|<1 \implies |{b}/{a}-q| \leq 1 \implies |b-aq|\leq |a|
-		$$ 
+		$
+		 
 		Thus, $\mathbb Z[i]$ is a Euclidean domain.
 	\end{proof}
 \end{document}
