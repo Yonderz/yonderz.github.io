@@ -1,8 +1,8 @@
 ---
-title: Euclidean domain Z[i]
+title: Euclidean domain $Z[i]$
 mathjax: true
 tags: number-theory
-excerpt: The ring Z[i] is a Euclidean domain.
+excerpt: The ring $Z[i]$ is a Euclidean domain.
 ---
 \documentclass{article}
 %preamble
@@ -20,7 +20,11 @@ excerpt: The ring Z[i] is a Euclidean domain.
 	\end{prop}
 			
 	\begin{proof}
-		Assume $\exists a,b,c,d \in \mathbb Z : abcd \neq 0\, \land \, (a+bi)\cdot (c+di)=0 \\ \implies (ac-bd)+(ad+bc)i=0 \implies ac-bd=0 \, \land \, ad+bc=0 \\ \implies \frac dc = \frac ab = -\frac cd \implies c^2=-d^2 \implies c=d=0 $
+		Assume $\exists a,b,c,d \in \mathbb Z : abcd \neq 0\, \land \, (a+bi)\cdot (c+di)=0 $
+		
+		$\implies (ac-bd)+(ad+bc)i=0 \implies ac-bd=0 \, \land \, ad+bc=0 $
+		
+		$\implies \frac dc = \frac ab = -\frac cd \implies c^2=-d^2 \implies c=d=0 $
 		
 		Contradict with the assumption therefore $\mathbb Z[i]$ is an integral domain. 
 		
