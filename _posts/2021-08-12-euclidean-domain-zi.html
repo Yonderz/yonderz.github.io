@@ -3,6 +3,7 @@ title: Euclidean domain Zi
 mathjax: true
 tags: number-theory
 key: 2021-08-12-euclidean-domain-zi
+modify_date: 2021-08-14
 ---
 <blockquote class="statement">
     <p><strong>Proposition</strong> The ring <span class="inline_math">\( \mathbb Z[i] \)</span> is a Euclidean
@@ -20,13 +21,13 @@ key: 2021-08-12-euclidean-domain-zi
 <p>Contradict with the assumption therefore <span class="inline_math">\( \mathbb Z[i] \)</span> is an integral
     domain.</p>
 <p><span class="inline_math">\( \forall a,b \in \mathbb Z[i] \)</span> (WLOG, assume <span class="inline_math">\(
-        |a| \leq |b| \)</span>) <span class="inline_math">\( \exists c=c_1+c_2i \in \mathbb C : ac=b \, \land \,
+        N(a) \leq N(b) \)</span>) <span class="inline_math">\( \exists c=c_1+c_2i \in \mathbb C : ac=b \, \land \,
         c_1,c_2 \in \mathbb R \)</span></p>
 <p>Set <span class="inline_math">\( q=q_1+q_2i \in \mathbb Z[i]: |q_1-c_1|\leq 1/2 \, \land \, |q_2-c_2|\leq 1/2
         \)</span></p>
 <p>
     <span class="inline_math">\(
-        |q_1-c_1|^2+|q_2-c_2|^2&lt; 1 \implies |c-q|&lt;1 \implies |{b}/{a}-q| \leq 1 \implies |b-aq|\leq |a|
+        |q_1-c_1|^2+|q_2-c_2|^2&lt; 1 \implies N(c-q)&lt;1 \implies N({b}/{a}-q) \leq 1 \implies N(b-aq)\leq N(a)
         \)</span>
 </p>
 <p>Thus, <span class="inline_math">\( \mathbb Z[i] \)</span> is a Euclidean domain.<span
