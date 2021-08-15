@@ -1,0 +1,59 @@
+---
+title: Prime in Zi
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{lem}{Lemma}
+%\newtheorem{lem}{Lemma}
+\newtheorem{claim}{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{lem}[Prime in ${\mathbb Z [i] }$]
+		Let p be a prime in ${\mathbb Z [i] }$. Then there exists an integer prime q such that either $N (p) = q$ or $N (p) = q^2$. In the latter case p is an associate of q. Moreover, $N (p) = q$ if and only if q is the sum of two squares.
+	\end{lem}
+	\begin{proof}
+		$N(p) \in \mathbb{Z}^* \implies p \overline {p} = N(p)=q_1q_2\cdots q_m$ where $q_i$ are integer primes. 
+		
+		Note $q_i \in {\mathbb Z [i] } \implies \exists q_s : p \mid q_s \implies \exists t \in {\mathbb Z [i] } : pt=q_s \implies N(p) N(t)= N(q_s) $
+		
+		$\implies N(p) \mid q_s^2 \implies N(p)= q_s \, \lor \, q_s^2$
+		
+
+		\begin{itemize}\renewcommand{\labelitemi}{}
+			\item 
+				\begin{claim} \label{associate}
+					If $N (p) = q^2$, then p is an associate of q.
+				\end{claim}
+				\begin{proof}\renewcommand{\qedsymbol}{$\blacksquare$}
+					$N(p) N(t)= N(q)=q^2 \implies N(t)=1 \implies t$  is a unit
+					
+					$\implies pu=q \implies$ $p$ is an associate of $q$
+				\end{proof}	
+			\item 
+				\begin{claim}
+				$N (p) = q$ if and only if q is the sum of two squares.	
+				\end{claim}
+				\begin{proof}\renewcommand{\qedsymbol}{$\blacksquare$}\
+					\begin{itemize}
+						\item[$\Rightarrow$:]
+							$N (p) = N(a+bi)=a^2+b^2=p$
+						\item [$\Leftarrow$:]
+							Assume $p$ is a prime in ${\mathbb Z [i] }$ and $N (p) = q^2$. Based on \hyperref[associate]{Claim 1}, $q$ is an associate of $p$. Thus, $q$ is a prime in ${\mathbb Z [i] }$.
+							
+							Note $\exists a,b \in \mathbb Z : a^2+b^2=p \implies \exists r=a+bi \in {\mathbb Z [i] } : r\overline {r}=p$\\
+							$\implies q$ is not a prime in ${\mathbb Z [i] }$. Contradiction, $N(p)$ must be $q$
+					\end{itemize}
+				\end{proof}							
+		\end{itemize}
+
+	\end{proof}
+
+		
+\end{document}
