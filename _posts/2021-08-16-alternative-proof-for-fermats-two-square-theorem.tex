@@ -1,0 +1,26 @@
+---
+title: An alternative proof for Fermat’s Two-Square Theorem using prime in Zi
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Fermat’s Two-Square Theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	
+	\begin{proof}
+		Assume $p$ is an integer prime that is congruent to $1\bmod 4$. Then $\exists n,r \in \mathbb Z : n^2+1=pr \implies p|(n+i)(n-i)$ Note $p$ does not divide either $n+i$ or $n-i$. So $p$ is not a prime in $\mathbb Z [i]$. Then there exists a prime $q \in \mathbb Z [i] : q|p$. 
+		
+		$\implies N(q)|N(p)=p^2$ since $p,q $ are not associates $\implies N(q)=N(q_1+q_2 i)=q_1^2+q_2^2=p$ where $q_1, q_2$ are integers
+	\end{proof}
+	
+	Note we can find $q=\gcd(p,n+i)$ by Euclid's algorithm. 		
+\end{document}
