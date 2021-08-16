@@ -1,0 +1,60 @@
+---
+title: Prime in Zi
+mathjax: true
+tags: number-theory
+key: 2021-08-15-prime-in-zi
+---
+<blockquote class="statement">
+    <p><strong>Lemma (Prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>)</strong>
+        Let p be a prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>.<span class="intersentencespace"></span>
+        Then there exists an integer prime q such that either <span class="inline_math">\( N (p) = q \)</span> or <span
+            class="inline_math">\( N (p) = q^2 \)</span>.<span class="intersentencespace"></span> In the latter case p is an
+        associate of q.<span class="intersentencespace"></span> Moreover, <span class="inline_math">\( N (p) = q \)</span>
+        if and only if
+        q is the sum of two squares.<span class="intersentencespace"></span></p>
+</blockquote>
+<!--more-->
+<p><em>Proof. </em><span class="inline_math">\( N(p) \in \mathbb{Z}^* \implies p \overline {p} = N(p)=q_1q_2\cdots q_m \)</span>
+    where <span class="inline_math">\( q_i \)</span> are integer primes.</p>
+<p>Note <span class="inline_math">\( q_i \in {\mathbb Z [i] } \implies \exists q_s : p \mid q_s \implies \exists t
+        \in {\mathbb Z [i] } : pt=q_s \implies N(p) N(t)= N(q_s) \)</span></p>
+<p>
+    <span class="inline_math">\( \implies N(p) \mid q_s^2 \implies N(p)= q_s \, \lor \, q_s^2 \)</span>
+</p>
+<ul>
+    <li>
+        <p id="associate" data-tralics-id="uid2" data-number=""><strong>Claim 1</strong>
+
+            If <span class="inline_math">\( N (p) = q^2 \)</span>, then p is an associate of q.<span
+                class="intersentencespace"></span></p>
+
+        <p><span class="inline_math">\( N(p) N(t)= N(q)=q^2 \implies N(t)=1 \implies t \)</span> is a unit</p>
+        <p><span class="inline_math">\( \implies pu=q \implies \)</span> <span class="inline_math">\( p \)</span> is
+            an associate of <span class="inline_math">\( q \)</span></p>
+    </li>
+    <li>
+        <p id="uid4" data-tralics-id="uid4" data-number=""><strong>Claim 2</strong> <span class="inline_math">\( N
+                (p) = q \)</span> if and only if q is the sum of two squares.<span class="intersentencespace"></span>
+        </p>
+
+
+        <ul><label><span class="inline_math">\( \Rightarrow \)</span>:</label>
+            <li><span class="inline_math">\( N (p) = N(a+bi)=a^2+b^2=p \)</span>
+            </li><label><span class="inline_math">\( \Leftarrow \)</span>:</label>
+            <li>Assume <span class="inline_math">\( p \)</span> is a prime in <span class="inline_math">\( {\mathbb
+                    Z [i] } \)</span> and <span class="inline_math">\( N (p) = q^2 \)</span>.<span
+                    class="intersentencespace"></span> Based on <a href="#associate" class="hyperref">Claim 1</a>,
+                <span class="inline_math">\( q \)</span> is an associate of <span class="inline_math">\( p
+                    \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\( q
+                    \)</span> is a prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>.
+                <p>Note <span class="inline_math">\( \exists a,b \in \mathbb Z : a^2+b^2=p \implies \exists r=a+bi
+                        \in {\mathbb Z [i] } : r\overline {r}=p \)</span><span class="break"></span>
+                    <span class="inline_math">\( \implies q \)</span> is not a prime in <span class="inline_math">\(
+                        {\mathbb Z [i] } \)</span>.<span class="intersentencespace"></span> Contradiction, <span
+                        class="inline_math">\( N(p) \)</span> must be <span class="inline_math">\( q \)</span>
+                </p>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% include qed.html %}
