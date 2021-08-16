@@ -3,18 +3,30 @@ title: Prime in Zi
 mathjax: true
 tags: number-theory
 key: 2021-08-15-prime-in-zi
+modify_date: 2021-08-16
 ---
 <blockquote class="statement">
-    <p><strong>Lemma (Prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>)</strong>
-        Let p be a prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>.<span class="intersentencespace"></span>
-        Then there exists an integer prime q such that either <span class="inline_math">\( N (p) = q \)</span> or <span
-            class="inline_math">\( N (p) = q^2 \)</span>.<span class="intersentencespace"></span> In the latter case p is an
-        associate of q.<span class="intersentencespace"></span> Moreover, <span class="inline_math">\( N (p) = q \)</span>
-        if and only if
-        q is the sum of two squares.<span class="intersentencespace"></span></p>
+    <p><strong>Proposition (Prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>)</strong>
+        Primes in <span class="inline_math">\( {\mathbb Z [i] } \)</span> are either of the form a +bi, where <span
+            class="inline_math">\( a^2 +b^2 \)</span> is an integer prime, or, q and its associate, where q is an integer
+        prime that is not the sum of two squares.<span class="intersentencespace"></span></p>
 </blockquote>
+
 <!--more-->
-<p><em>Proof. </em><span class="inline_math">\( N(p) \in \mathbb{Z}^* \implies p \overline {p} = N(p)=q_1q_2\cdots q_m \)</span>
+
+<p>This proposition will be clear once we prove the following lemma.</p>
+
+<blockquote class="statement">
+    <p><strong>Lemma</strong> Let p be a prime in <span class="inline_math">\( {\mathbb Z [i] } \)</span>.<span
+            class="intersentencespace"></span> Then there exists an integer prime q such that either <span
+            class="inline_math">\( N (p) = q \)</span> or <span class="inline_math">\( N (p) = q^2 \)</span>.<span
+            class="intersentencespace"></span> In the latter case p is an associate of q.<span
+            class="intersentencespace"></span> Moreover, <span class="inline_math">\( N (p) = q \)</span> if and only if q
+        is the sum of two squares.<span class="intersentencespace"></span></p>
+</blockquote>
+    
+<p><em>Proof. </em><span class="inline_math">\( N(p) \in \mathbb{Z}^* \implies p \overline {p} = N(p)=q_1q_2\cdots q_m
+        \)</span>
     where <span class="inline_math">\( q_i \)</span> are integer primes.</p>
 <p>Note <span class="inline_math">\( q_i \in {\mathbb Z [i] } \implies \exists q_s : p \mid q_s \implies \exists t
         \in {\mathbb Z [i] } : pt=q_s \implies N(p) N(t)= N(q_s) \)</span></p>
