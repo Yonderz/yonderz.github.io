@@ -1,0 +1,22 @@
+---
+title: Alternative proof for Fermat’s Two-Square Theorem
+mathjax: true
+tags: number-theory
+excerpt: An alternative proof for Fermat’s Two-Square Theorem using prime in Zi
+---
+<p><em>Proof.</em></p>
+<p>Assume <span class="inline_math">\( p \)</span> is an integer prime that is congruent to <span class="inline_math">\(
+        1\bmod 4 \)</span>.<span class="intersentencespace"></span> Then <span class="inline_math">\( \exists n,r \in
+        \mathbb Z : n^2+1=pr \implies p|(n+i)(n-i) \)</span> Note <span class="inline_math">\( p \)</span> does not
+    divide either <span class="inline_math">\( n+i \)</span> or
+    <span class="inline_math">\( n-i \)</span>.<span class="intersentencespace"></span> So <span class="inline_math">\(
+        p \)</span> is not a prime in <span class="inline_math">\( \mathbb Z [i]
+        \)</span>.<span class="intersentencespace"></span> Then there exists a prime <span class="inline_math">\( q
+        \in \mathbb Z [i] : q|p \)</span>.
+</p>
+<p><span class="inline_math">\( \implies N(q)|N(p)=p^2 \)</span> since <span class="inline_math">\( p,q \)</span>
+    are not associates <span class="inline_math">\( \implies N(q)=N(q_1+q_2 i)=q_1^2+q_2^2=p \)</span> where <span
+        class="inline_math">\( q_1, q_2 \)</span> are integers</p>
+{% include qed.html %}
+<p>Note we can find <span class="inline_math">\( q=\gcd(p,n+i) \)</span> by Euclid’s algorithm.<span
+        class="intersentencespace"></span> </p>
