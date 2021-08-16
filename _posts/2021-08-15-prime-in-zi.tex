@@ -10,12 +10,18 @@ excerpt:
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage[colorlinks=true]{hyperref}
 \newtheorem*{lem}{Lemma}
-%\newtheorem{lem}{Lemma}
+\newtheorem*{prop}{Proposition}
 \newtheorem{claim}{Claim}
 \theoremstyle{definition}\newtheorem{definition}{Definition}
 
 \begin{document}
-	\begin{lem}[Prime in ${\mathbb Z [i] }$]
+	\begin{prop}[Prime in ${\mathbb Z [i] }$]
+		Primes in ${\mathbb Z [i] }$ are either of the form a +bi, where $a^2 +b^2$ is an integer prime, or, q and its associate, where q is an integer prime that is not the sum of two squares.
+	\end{prop}
+
+\
+
+	\begin{lem}
 		Let p be a prime in ${\mathbb Z [i] }$. Then there exists an integer prime q such that either $N (p) = q$ or $N (p) = q^2$. In the latter case p is an associate of q. Moreover, $N (p) = q$ if and only if q is the sum of two squares.
 	\end{lem}
 	\begin{proof}
