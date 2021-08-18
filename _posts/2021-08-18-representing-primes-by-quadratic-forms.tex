@@ -1,0 +1,72 @@
+---
+title: Representing primes by quadratic forms
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{claim}{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+
+\begin{thm}
+	Suppose that unique factorization holds in $\mathbb { Z } [ \alpha ]$, and let p be an integer prime such that the polynomial $P ( x , 1 ) = x ^ { 2 } - b x + c$ has a root mod p. Then there exist integers x and y such that $P (x, y) = p$. Conversely, if there exist such x and y, then $x^2 - bx + c$ has a root mod p.
+\end{thm}	
+\begin{proof}
+\
+	\begin{itemize}
+		\item[$\Rightarrow$:]$\exists x \in \mathbb Z : p \mid x ^ { 2 } - b x + c = (x+\alpha)(x-\alpha)$ but $p \nmid (x+\alpha)\, \lor \,(x-\alpha)$. So $p$ is not a prime in $\mathbb { Z } [ \alpha ]$. $N(p)=p^2 \implies \exists q = q_1+ q_2 \alpha \in \mathbb { Z } [ \alpha ] : q|p \land N(q)=P(q_1,q_2)=p$
+		\item[$\Leftarrow$:] Assume $y$ has an inverse $y^{-1}$ mod $p$. Then 
+		$$P (x, y)\cdot (y^{-1})^2 \equiv (xy^{-1})^2 -b(xy^{-1}) + c\equiv p  \equiv 0 \equiv P ((xy^{-1}), 1) \mod p$$
+		\begin{itemize}
+			\item[] 
+				\begin{claim} y must have an inverse $y^{-1}$ mod $p$.
+				\end{claim}
+				\begin{proof}\renewcommand{\qedsymbol}{$\blacksquare$}
+				Assume $y$ does not have an inverse. Since $p$ is a prime $y \equiv 0 \mod p$. $P(x,y)\equiv x^2 \equiv 0 \mod p \implies p|x^2 \implies p^2|x^2 \implies P(x,y)\equiv 0 \mod p^2$. But $P(x,y)\equiv p \not\equiv 0 \mod p^2$ 
+				
+				Contradiction, so $y$ must have an inverse.
+				\end{proof}
+		\end{itemize}
+	\end{itemize}
+\end{proof}
+
+\begin{lem}
+Let p be an odd prime. The polynomial $x^2- bx + c$ has a root mod p if, and only if, $b^2- 4c$ is zero or a quadratic residue mod p.	
+\end{lem}
+\begin{proof}\
+	\begin{itemize}
+		\item[$\Rightarrow$:]
+		$\exists x \in \mathbb Z : x^2- bx + c \equiv (2x-b)^2+(4c-b^2) \equiv 0 \mod p$
+		
+		$\implies (2x-b)^2 \equiv  b^2- 4c \mod p$
+		
+		$\implies b^2- 4c$ is zero or a quadratic residue mod p
+		\item[$\Leftarrow$:]
+		Since $p$ is a prime, there exists a primitive root $r \bmod p$
+		
+		$\implies b^2- 4c \equiv r^{2n} \mod p$
+		
+		$$
+			\text{Set }x=\begin{cases}
+				(r^n+b+p)/2 & \text{if } r^n+b \equiv 1 \bmod 2\\
+				(r^n+b)/2 & \text{if } r^n+b \equiv 0 \bmod 2
+			\end{cases} 
+		$$
+		
+		$\implies 2x - b \equiv r^{n} \mod p$
+		
+		$\implies (2x-b)^2+(4c-b^2) \equiv 4 \cdot (x^2- bx + c) \equiv 0 \mod p$
+		
+		$\implies x^2- bx + c \equiv 0 \mod p$
+	\end{itemize}
+\end{proof}
+			
+\end{document}
