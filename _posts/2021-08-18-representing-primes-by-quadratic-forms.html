@@ -1,0 +1,85 @@
+---
+title: Representing primes by quadratic forms
+mathjax: true
+tags: number-theory
+key: 2021-08-18-representing-primes-by-quadratic-forms
+---
+<blockquote class="statement">
+    <p><strong>Theorem</strong> Suppose that unique factorization holds in <span class="inline_math">\( \mathbb { Z } [
+            \alpha ] \)</span>, and let p be an integer prime such that the polynomial <span class="inline_math">\( P (
+            x , 1 ) = x ^ { 2 } - b x + c \)</span> has a root mod p.<span class="intersentencespace"></span> Then there
+        exist integers x and y such that <span class="inline_math">\( P (x, y) = p \)</span>.<span
+            class="intersentencespace"></span> Conversely, if there exist such x and y, then <span class="inline_math">\(
+            x^2 - bx + c \)</span> has a root mod p.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<!--more-->
+<p><em>Proof.</em></p>
+<ul style="list-style-type:none;"><label><span class="inline_math">\( \Rightarrow \)</span>:</label>
+    <li><span class="inline_math">\( \exists x \in \mathbb Z : p \mid x ^ { 2 } - b x + c = (x+\alpha)(x-\alpha)
+            \)</span> but <span class="inline_math">\( p \nmid (x+\alpha)\, \lor \,(x-\alpha) \)</span>.<span
+            class="intersentencespace"></span> So <span class="inline_math">\( p \)</span> is not a prime in <span
+            class="inline_math">\( \mathbb { Z } [ \alpha ] \)</span>.<span class="intersentencespace"></span> <span
+            class="inline_math">\( N(p)=p^2 \implies \exists q = q_1+ q_2 \alpha \in \mathbb { Z } [ \alpha ] : q|p
+            \land N(q)=P(q_1,q_2)=p \)</span>
+    </li><label><span class="inline_math">\( \Leftarrow \)</span>:</label>
+    <li>Assume <span class="inline_math">\( y \)</span> has an inverse <span class="inline_math">\( y^{-1} \)</span>
+        mod <span class="inline_math">\( p \)</span>.<span class="intersentencespace"></span> Then
+        <div class="equation">\[ P (x, y)\cdot (y^{-1})^2 \equiv (xy^{-1})^2 -b(xy^{-1}) + c\equiv p \equiv 0 \equiv
+            P ((xy^{-1}), 1) \mod p \]
+        </div>
+        <ul noindent="true" style="list-style-type:none;"><label></label>
+            <li>
+                <p id="uid4" data-tralics-id="uid4" data-number=""><strong>Claim 1</strong> y must have an inverse
+                    <span class="inline_math">\( y^{-1} \)</span> mod <span class="inline_math">\( p \)</span>.<span
+                        class="intersentencespace"></span>
+                </p>
+
+                <p>Assume <span class="inline_math">\( y \)</span> does not have an inverse.<span
+                        class="intersentencespace"></span> Since <span class="inline_math">\( p \)</span> is a prime
+                    <span class="inline_math">\( y \equiv 0 \mod p \)</span>.<span class="intersentencespace"></span>
+                    <span class="inline_math">\( P(x,y)\equiv x^2 \equiv 0
+                        \mod p \implies p|x^2 \implies p^2|x^2 \implies P(x,y)\equiv 0 \mod p^2 \)</span>.<span
+                        class="intersentencespace"></span> But <span class="inline_math">\( P(x,y)\equiv p
+                        \not\equiv 0 \mod p^2 \)</span>
+                </p>
+                <p>Contradiction, so <span class="inline_math">\( y \)</span> must have an inverse.<span
+                        class="intersentencespace"></span></p>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% include qed.html %}
+
+
+<blockquote class="statement">
+    <p id="uid5" data-tralics-id="uid5" data-number=""><strong>Lemma 1</strong> Let p be an odd prime.<span
+            class="intersentencespace"></span> The polynomial <span class="inline_math">\( x^2- bx + c \)</span> has a
+        root mod p if, and only if, <span class="inline_math">\( b^2- 4c \)</span> is zero or a quadratic residue mod
+        p.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof.</em></p>
+<ul style="list-style-type:none;"><label><span class="inline_math">\( \Rightarrow \)</span>:</label>
+    <li><span class="inline_math">\( \exists x \in \mathbb Z : x^2- bx + c \equiv (2x-b)^2+(4c-b^2) \equiv 0 \mod p
+            \)</span>
+        <p><span class="inline_math">\( \implies (2x-b)^2 \equiv b^2- 4c \mod p \)</span></p>
+        <p><span class="inline_math">\( \implies b^2- 4c \)</span> is zero or a quadratic residue mod p</p>
+    </li><label><span class="inline_math">\( \Leftarrow \)</span>:</label>
+    <li>Since <span class="inline_math">\( p \)</span> is a prime, there exists a primitive root <span
+            class="inline_math">\( r \bmod p \)</span>
+        <p><span class="inline_math">\( \implies b^2- 4c \equiv r^{2n} \mod p \)</span></p>
+        <div class="equation">\[
+            \text{Set }x=\begin{cases}
+            (r^n+b+p)/2 &amp; \text{if } r^n+b \equiv 1 \bmod 2\\
+            (r^n+b)/2 &amp; \text{if } r^n+b \equiv 0 \bmod 2
+            \end{cases}
+            \]
+        </div>
+        <p class="noindent"><span class="inline_math">\( \implies 2x - b \equiv r^{n} \mod p \)</span></p>
+        <p><span class="inline_math">\( \implies (2x-b)^2+(4c-b^2) \equiv 4 \cdot (x^2- bx + c) \equiv 0 \mod p
+                \)</span></p>
+        <p><span class="inline_math">\( \implies x^2- bx + c \equiv 0 \mod p \)</span></p>
+    </li>
+</ul>
+{% include qed.html %}
