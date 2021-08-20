@@ -1,0 +1,38 @@
+---
+title: Quadratic algebraic integer
+mathjax: true
+tags: number-theory
+key: 2021-08-20-quadratic-algebraic-integer
+excerpt:<blockquote class="statement"> <p><strong>Proposition</strong> If <span class="inline_math">\( \alpha \)</span> is an algebraic integer of degree two, then <span class="inline_math">\( \mathbb Z [\alpha] \)</span> is equal to the set of complex numbers of the form <span class="inline_math">\( x + y\alpha \)</span>, where x and y are integers.<span class="intersentencespace"></span></p> </blockquote>
+---
+<blockquote class="statement">
+    <p id="uid1" data-tralics-id="uid1" data-number=""><strong>Definition</strong> An element <span class="inline_math">\(
+            \alpha \)</span> of <span class="inline_math">\( \mathbb C \)</span> is an algebraic
+        integer of degree two (alternatively, a quadratic algebraic integer) if there exists a polynomial of the form
+        <span class="inline_math">\( P (X ) = X^ 2 + aX + b \)</span> with a, b integers roots such that <span
+            class="inline_math">\( P (X ) \)</span> has
+        no rational roots and <span class="inline_math">\( P (\alpha) = 0 \)</span>.<span class="intersentencespace"></span>
+    </p>
+</blockquote>
+
+<blockquote class="statement">
+    <p><strong>Proposition</strong> If <span class="inline_math">\( \alpha \)</span> is an algebraic integer of degree
+        two, then <span class="inline_math">\( \mathbb Z [\alpha] \)</span> is equal to the set of complex numbers of
+        the form <span class="inline_math">\( x + y\alpha \)</span>, where x and y are integers.<span
+            class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em>Let set S be the set of complex numbers of the form <span class="inline_math">\( x + y\alpha \)</span>, where x
+    and y are integers.</p>
+<p>Then it is obvious that S is a subset of <span class="inline_math">\( \mathbb Z [\alpha] \)</span>.</p>
+<p><span class="inline_math">\( \forall x,y,z \in S, xy=x_2 y_2 \alpha^2 + (x_1y_2+x_2y_1) \alpha + x_1 y_1= (x_2
+        y_2)\cdot(-a\alpha-b)+ (x_1y_2+x_2y_1) \alpha + x_1 y_1 </span><span class="inline_math"></span> = yx \implies xy \in S \)</span>.<span
+        class="intersentencespace"></span> Note <span class="inline_math">\( (x+y)z=xz+yz \)</span>.<span
+        class="intersentencespace"></span> So S is a subring of <span class="inline_math">\( \mathbb C
+        \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( \alpha \in S \implies S
+        \supseteq \mathbb Z [\alpha] \)</span></p>
+<p>
+    <span class="inline_math">\( S \subseteq \mathbb Z [\alpha] \, \land \, S \supseteq \mathbb Z [\alpha] \implies
+        S=\mathbb Z [\alpha] \)</span>
+</p>
+{% include qed.html %}
