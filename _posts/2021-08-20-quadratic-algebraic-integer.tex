@@ -1,0 +1,36 @@
+---
+title: Quadratic algebraic integer
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{proposition}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+\begin{definition}
+	An element $\alpha$ of $\mathbb C$ is an algebraic integer of degree two (alternatively, a quadratic algebraic integer) if there exists a polynomial of the form $P (X ) = X^ 2 + aX + b$ with a, b integers roots such that $P (X )$ has
+no rational roots and $P (\alpha) = 0$.
+\end{definition}
+\
+\begin{proposition}
+	 If $\alpha$ is an algebraic integer of degree two, then $\mathbb Z [\alpha]$ is equal to the set of complex numbers of the form $x + y\alpha$, where x and y are integers.
+\end{proposition}
+\begin{proof}
+	Let set S be the set of complex numbers of the form $x + y\alpha$, where x and y are integers.
+	
+	Then it is obvious that S is a subset of $\mathbb Z [\alpha]$.
+	
+	$\forall x,y,z \in S, xy=x_2 y_2 \alpha^2 + (x_1y_2+x_2y_1) \alpha + x_1 y_1= (x_2 y_2)\cdot(-a\alpha-b)+ (x_1y_2+x_2y_1) \alpha + x_1 y_1 = yx \implies xy \in S$. Note $(x+y)z=xz+yz$. So S is a subring of $\mathbb C$. $\alpha \in S \implies S \supseteq \mathbb Z [\alpha]$ 
+	
+	$S \subseteq \mathbb Z [\alpha] \, \land \, S \supseteq \mathbb Z [\alpha] \implies S=\mathbb Z [\alpha]$
+\end{proof}	
+			
+\end{document}
