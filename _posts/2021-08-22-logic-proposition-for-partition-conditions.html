@@ -1,0 +1,56 @@
+---
+title: Logic proposition for partition conditions
+mathjax: true
+tags: logic set-theory
+excerpt: <blockquote class="statement"> <p> <strong>Corollary</strong> </p> <p>If</p> <ol> <li><span class="inline_math">\( \forall s \in S, s\in A_1 \cup A_2 \cup \cdots \cup A_n \, \land \, A_1,A_2,\ldots,A_n \)</span> are pairwise disjoint </li> <li><span class="inline_math">\( s\in A_i \implies s \in B_i \)</span> </li> <li><span class="inline_math">\( \forall s \in S, s\in B_1 \cup B_2 \cup \cdots \cup B_n \, \land \, B_1,B_2,\ldots,B_n \)</span> are pairwise disjoint </li> </ol> <p>Then <span class="inline_math">\( \forall s \in S, s\in B_i \implies s \in A_i \)</span></p> </blockquote>
+---
+<blockquote class="statement">
+    <p>
+        <strong>Proposition</strong>
+    </p>
+    <p>If</p>
+    <ol>
+        <li><span class="inline_math">\( \forall s \in S, s\in A_1 \cup A_2 \, \land \, A_1 \cup A_2 = \varnothing
+                \)</span>
+        </li>
+        <li><span class="inline_math">\( s\in A_1 \implies s \in B_1 \, \land \, s\in A_2 \implies s \in B_2 \)</span>
+        </li>
+        <li><span class="inline_math">\( \forall s \in S, s\in B_1 \cup B_2 \, \land \, B_1 \cup B_2 = \varnothing
+                \)</span>
+        </li>
+    </ol>
+    <p>Then <span class="inline_math">\( \forall s \in S, s\in B_1 \implies s \in A_1 \, \land \, s\in B_2 \implies s
+            \in A_2 \)</span></p>
+</blockquote>
+
+
+<p><em>Proof.</em></p>
+<p>
+    <span class="inline_math">\( (s\in A_2 \implies s \in B_2) \iff \{ \lnot (s \in B_2) \implies \lnot (s\in A_2)
+        \} \)</span>
+</p>
+<p>Since <span class="inline_math">\( B_1, B_2 \)</span> partition <span class="inline_math">\( S \)</span>, <span
+        class="inline_math">\( s \not\in B_2 \iff s\in B_1 \)</span>.<span class="intersentencespace"></span>
+    Similarly, <span class="inline_math">\( s \not\in A_2 \iff s\in A_1 \)</span></p>
+<p>Thus, <span class="inline_math">\( (s\in A_2 \implies s \in B_2) \iff (s\in B_1 \implies s \in A_1) \)</span></p>
+<p>Similarly, <span class="inline_math">\( (s\in A_1 \implies s \in B_1) \iff (s\in B_2 \implies s \in A_2)
+        \)</span></p>
+{% include qed.html %}
+
+<blockquote class="statement">
+    <p>
+        <strong>Corollary</strong>
+    </p>
+    <p>If</p>
+    <ol>
+        <li><span class="inline_math">\( \forall s \in S, s\in A_1 \cup A_2 \cup \cdots \cup A_n \, \land \,
+                A_1,A_2,\ldots,A_n \)</span> are pairwise disjoint
+        </li>
+        <li><span class="inline_math">\( s\in A_i \implies s \in B_i \)</span>
+        </li>
+        <li><span class="inline_math">\( \forall s \in S, s\in B_1 \cup B_2 \cup \cdots \cup B_n \, \land \,
+                B_1,B_2,\ldots,B_n \)</span> are pairwise disjoint
+        </li>
+    </ol>
+    <p>Then <span class="inline_math">\( \forall s \in S, s\in B_i \implies s \in A_i \)</span></p>
+</blockquote>
