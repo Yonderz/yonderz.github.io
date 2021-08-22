@@ -1,0 +1,40 @@
+---
+title: Fundamental 1-unit in Z√d
+mathjax: true
+tags: number-theory
+excerpt:
+key: 2021-08-22-fundamental-1-unit-in-zd
+---
+<blockquote class="statement">
+    <p><strong>Proposition</strong> Suppose there exists a nontrivial element of <span class="inline_math">\( \mathbb {
+            Z } [ \sqrt { d } ] ^ { \times , 1 } \)</span>.<span class="intersentencespace"></span> Then every element
+        of <span class="inline_math">\( \mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 } \)</span> is of the form <span
+            class="inline_math">\( \pm \epsilon ^ { n } \)</span> for some <span class="inline_math">\( n \)</span> in
+        <span class="inline_math">\( \mathbb { Z } \)</span>, where <span class="inline_math">\( \epsilon \)</span> is
+        the fundamental 1-unit.<span class="intersentencespace"></span>
+    </p>
+</blockquote>
+<!--more-->
+
+<p><em>Proof. </em>Assume there exists a nontrivial element of <span class="inline_math">\( \mathbb { Z } [ \sqrt { d }
+        ] ^ { \times
+        , 1 } \)</span>, <span class="inline_math">\( t \)</span>.<span class="intersentencespace"></span> <span
+        class="inline_math">\( \forall n \in \mathbb {Z}, t \neq \pm \epsilon ^ { n } \)</span>.<span
+        class="intersentencespace"></span> Then <span class="inline_math">\( \exists k \in \mathbb { Z } : t \in
+        (\epsilon^k,\epsilon^{k+1}) \, \lor \, -t \in (\epsilon^k,\epsilon^{k+1}) \)</span>.</p>
+<p>If <span class="inline_math">\( t \in (\epsilon^k,\epsilon^{k+1}) \)</span>, <span class="inline_math">\( t\cdot
+        \epsilon^{-k} \in \mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 } \)</span>.<span
+        class="intersentencespace"></span> <span class="inline_math">\( t&lt;\epsilon^{k+1} \implies
+        1=\epsilon^{0}&lt;t\cdot \epsilon^{-k} &lt; \epsilon \)</span>.<span class="intersentencespace"></span>
+    Since <span class="inline_math">\( t \neq \pm \epsilon ^ { n } \)</span>, <span class="inline_math">\( t\cdot
+        \epsilon^{-k} \)</span> is a nontrivial element of <span class="inline_math">\( \mathbb { Z } [ \sqrt { d }
+        ] ^ { \times , 1 } \)</span>.<span class="intersentencespace"></span> Contradiction, such <span
+        class="inline_math">\( t \)</span> must not exist.</p>
+<p>Similarly, if <span class="inline_math">\( -t \in (\epsilon^k,\epsilon^{k+1}) \)</span>, such <span
+        class="inline_math">\( t \)</span> must not exist due to contradiction.</p>
+<p>Thus, every element of <span class="inline_math">\( \mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 } \)</span> is
+    of the form <span class="inline_math">\( \pm \epsilon ^ { n } \)</span> for some <span class="inline_math">\( n
+        \)</span> in <span class="inline_math">\( \mathbb { Z } \)</span>, where <span class="inline_math">\(
+        \epsilon \)</span> is the fundamental 1-unit.<span class="intersentencespace"></span> </p>
+
+{% include qed.html %}
