@@ -1,0 +1,81 @@
+---
+title: Pell's equation
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem{thm}{Theorem}
+\newtheorem{corollary}[thm]{Corollary}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let $\alpha$ be an irrational number, and $Q > 1$ an integer. Then there exist $p , q$ integers, with $1 \leq q < Q$, such that $| p - q \alpha | < \frac { 1 } { Q }$.
+	\end{thm}
+	
+	\begin{proof}
+		For $ 1\leq k \leq Q-1$: Set $\alpha_{k}=\left\lfloor k\alpha \right\rfloor$ such that $0 < k\alpha - \alpha_{k} < 1.$
+		
+		Partition the interval $[0,1]$ into $[0,1/Q] \cup [1/Q, 2/Q] \cup \cdots \cup [(Q-1)/Q, 1]$. So there are in total $Q$ subintervals. Let $S=\{0, \alpha - \alpha_{1}, 2\alpha - \alpha_{2}, \ldots (Q-1)\alpha - \alpha_{Q-1} ,1\}$, $|S|=Q+1$. There there must be a subinterval from earlier which contains at least 2 elements of $S$ which are not 0 and 1. Set $\alpha_0=0, \alpha_Q=1$. Since $s_x$ and $s_y$ are in the same subinterval, $|s_x-s_y|=|m\alpha-(\alpha_y-\alpha_x)| < 1/Q$ where $1 \leq m < Q$.
+	\end{proof}	
+	
+	\
+	\begin{corollary} \label{corollary}
+		For any irrational $\alpha$ there are infinitely many $\frac { p } { q }$ such that 
+		$$\left| \alpha - \frac { p } { q } \right| < \frac { 1 } { q ^ { 2 } }$$
+	\end{corollary}	
+	
+	\begin{proof}
+		$$
+		| p - q \alpha | < \frac { 1 } { Q } \iff |q| | \frac{p}{q} - \alpha | < \frac { 1 } { Q } \implies | \frac{p}{q} - \alpha | < \frac { 1 } { Q\cdot q } < \frac { 1 } { q ^ { 2 } }
+		$$
+		
+		For any given $Q\in Z$ there exists integers $p, q$ that satisfies the above ineqaulity. Find $Q' \in \mathbb Z : \frac 1 Q' < | p- q\alpha |$. Then there exists integers $p' , q'$ such that $| p'- q'\alpha | < \frac 1 Q' < | p- q\alpha |$. Clearly $p \neq p' \, \land \, q \neq q'$. We can repeat this process to find infinitely many such $p, q$.
+	\end{proof}
+	
+	\
+	\begin{thm}
+		For any squarefree d there is a nontrivial solution to $x^2 - d y^2=1$
+	\end{thm}
+	\begin{proof}
+		Since we are looking for nontrivial solution $y\neq 0$. $x^2 - d y^2=1 \iff \frac x y = \sqrt d $. Based on the earlier \hyperref[corollary]{corollary}, there are infinitely many  $\frac { x } { y }$ such that 
+		$$\left| \sqrt d - \frac { x } { y } \right| < \frac { 1 } { y ^ { 2 } } \iff 
+		\left| x - y\sqrt d \right| < \frac { 1 } {y} < y \sqrt d$$
+		
+		Note	
+		$$
+		\left| x + y\sqrt d \right| \leq \left| x - y\sqrt d \right| + |2y \sqrt d| < \frac { 1 } {y}+2y \sqrt d < 3 y \sqrt d
+		$$
+		Therefore,
+		$$
+		|N(x + y\sqrt d)| = \left| x + y\sqrt d \right| \cdot \left| x - y\sqrt d \right| <3\sqrt d
+		$$
+		Since $N(x + y\sqrt d) \in \mathbb Z$ and is bounded in a finite interval, there exists an integer $M : |M|<3\sqrt d \, \land \,$there exists infinitely many pairs of $(x,y)$ such that $N(x + y\sqrt d) = M$.
+		
+		Since there are finitely many congruence classes mod $M$, there are infinitely many $x$ in at least one congruence classes $[x_0]_M$. And there are infinitely many $y$ that is paired up with such $x$ in at least one congruence classes $[y_0]_M$.
+		
+		For any $(x_i, y_i)$ and $(x_j, y_j)$ that satisfy the above conditions, 
+		$$
+		\frac { x _ { i } - y _ { i } \sqrt { d } } { x _ { j } - y _ { j } \sqrt { d } }
+		=\frac { (x _ { i } - y _ { i } \sqrt { d }) (x _ { j } + y _ { j } \sqrt { d }) } { (x _ { j } - y _ { j } \sqrt { d }) (x _ { j } + y _ { j } \sqrt { d })}   
+		= \frac { \left( x _ { i } x _ { j } - d y _ { i } y _ { j } \right) + \left( x _ { i } y _ { j } - x _ { j } y _ { i } \right) \sqrt { d } } { M }
+		$$
+		Note,
+		\begin{align*}
+			 x _ { i } y _ { j } - x _ { j } y _ { i } \equiv x_0y_0-x_0y_0 \equiv 0 &\mod M \\
+			 x _ { i } x _ { j } - d y _ { i } y _ { j } \equiv x_0^2-dy_0^2 \equiv M &\mod M
+		\end{align*}
+		Therefore, $\exists a,b \in \mathbb Z$ \textit{s.t.}
+		$$
+		\frac { x _ { i } - y _ { i } \sqrt { d } } { x _ { j } - y _ { j } \sqrt { d } } =
+		a+b\sqrt { d }
+		$$
+		It is easy to tell that $N(a+b\sqrt { d })=M/M =1$. The solution is nontrivial when $(x_i, y_i) \neq (x_j, y_j)$.
+	\end{proof}
+\end{document}
