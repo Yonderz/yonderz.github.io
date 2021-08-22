@@ -1,7 +1,7 @@
 ---
 title: Logic proposition for partition conditions
 mathjax: true
-tags: logic, set-theory
+tags: logic set-theory
 excerpt:
 ---
 \documentclass{article}
@@ -24,10 +24,9 @@ excerpt:
 			\item $s\in A_1 \implies s \in B_1 \, \land \, s\in A_2 \implies s \in B_2$
 			\item $\forall s \in S, s\in B_1 \cup B_2 \, \land \, B_1 \cup B_2 = \varnothing$
 		\end{enumerate}
-	Then $\forall s \in S$,
-		$$s\in B_1 \implies s \in A_1 \, \land \, s\in B_2 \implies s \in A_2$$
+	Then $\forall s \in S, s\in B_1 \implies s \in A_1 \, \land \, s\in B_2 \implies s \in A_2$
 	\end{thm}
-	\
+
 	\begin{proof}
 			$(s\in A_2 \implies s \in B_2) \iff \{ \lnot (s \in B_2) \implies \lnot (s\in A_2) \}$
 			
@@ -47,6 +46,6 @@ excerpt:
 			\item $s\in A_i \implies s \in B_i$
 			\item $\forall s \in S, s\in B_1 \cup B_2 \cup \cdots \cup B_n \, \land \, B_1,B_2,\ldots,B_n$ are pairwise disjoint
 		\end{enumerate}
-	Then $$\forall s \in S, s\in B_i \implies s \in A_i$$
+	Then $\forall s \in S, s\in B_i \implies s \in A_i$
 	\end{corollary}
 \end{document}
