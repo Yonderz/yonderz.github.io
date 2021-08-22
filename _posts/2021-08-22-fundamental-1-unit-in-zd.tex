@@ -1,0 +1,32 @@
+---
+title: Fundamental 1-unit in Z√d
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+\begin{thm}
+	Suppose there exists a nontrivial element of $\mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$.
+	Then every element of $\mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$ is of the form $\pm \epsilon ^ { n }$ for some $n$ in $\mathbb { Z }$, where $\epsilon$ is the fundamental 1-unit.
+\end{thm}	
+
+\begin{proof}
+	Assume there exists a nontrivial element of $\mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$, $t$. $\forall n \in \mathbb {Z}, t \neq \pm \epsilon ^ { n } $. Then $\exists k \in \mathbb { Z } : t \in (\epsilon^k,\epsilon^{k+1}) \, \lor \, -t \in (\epsilon^k,\epsilon^{k+1})$.
+	
+	If $t \in (\epsilon^k,\epsilon^{k+1})$, $t\cdot \epsilon^{-k} \in \mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$. $t<\epsilon^{k+1} \implies 1=\epsilon^{0}<t\cdot \epsilon^{-k} < \epsilon$. Since $t \neq \pm \epsilon ^ { n } $, $t\cdot \epsilon^{-k}$ is a nontrivial element of $\mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$. Contradiction, such $t$ must not exist.
+	
+	Similarly, if $-t \in (\epsilon^k,\epsilon^{k+1})$, such $t$ must not exist due to contradiction.
+	
+	Thus, every element of $\mathbb { Z } [ \sqrt { d } ] ^ { \times , 1 }$ is of the form $\pm \epsilon ^ { n }$ for some $n$ in $\mathbb { Z }$, where $\epsilon$ is the fundamental 1-unit.
+\end{proof}		
+\end{document}
