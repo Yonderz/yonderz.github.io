@@ -1,0 +1,118 @@
+---
+title: Pell's equation
+mathjax: true
+tags: number-theory
+excerpt:
+key: 2021-08-23-pells-equation
+---
+<blockquote class="statement">
+	<p id="uid1" data-tralics-id="uid1" data-number=""><strong>Theorem 1</strong> Let <span class="inline_math">\(
+			\alpha \)</span> be an irrational number, and <span class="inline_math">\( Q &gt; 1 \)</span> an
+		integer.<span class="intersentencespace"></span> Then there exist <span class="inline_math">\( p , q \)</span>
+		integers, with <span class="inline_math">\( 1 \leq q &lt; Q \)</span>, such that <span class="inline_math">\( |
+			p - q \alpha | &lt; \frac { 1 } { Q } \)</span>.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em>For <span class="inline_math">\( 1\leq k \leq Q-1 \)</span>: Set <span class="inline_math">\(
+		\alpha_{k}=\left\lfloor k\alpha \right\rfloor \)</span> such that <span class="inline_math">\( 0 &lt;
+		k\alpha - \alpha_{k} &lt; 1. \)</span></p>
+<p>Partition the interval <span class="inline_math">\( [0,1] \)</span> into <span class="inline_math">\( [0,1/Q]
+		\cup [1/Q, 2/Q] \cup \cdots \cup [(Q-1)/Q, 1] \)</span>.<span class="intersentencespace"></span> So there
+	are in total <span class="inline_math">\( Q \)</span> subintervals.<span class="intersentencespace"></span> Let
+	<span class="inline_math">\( S=\{0, \alpha - \alpha_{1}, 2\alpha - \alpha_{2}, \ldots (Q-1)\alpha - \alpha_{Q-1}
+		,1\} \)</span>, <span class="inline_math">\( |S|=Q+1 \)</span>.<span class="intersentencespace"></span>
+	There there must be a subinterval from earlier which contains at least 2 elements of <span class="inline_math">\( S
+		\)</span> which are not 0 and 1.<span class="intersentencespace"></span> Set <span class="inline_math">\(
+		\alpha_0=0, \alpha_Q=1 \)</span>.<span class="intersentencespace"></span> Since <span class="inline_math">\( s_x
+		\)</span> and <span class="inline_math">\( s_y \)</span> are in the same
+	subinterval, <span class="inline_math">\( |s_x-s_y|=|m\alpha-(\alpha_y-\alpha_x)| &lt; 1/Q \)</span> where <span
+		class="inline_math">\( 1 \leq m &lt; Q \)</span>.<span class="intersentencespace"></span>
+</p>
+{% include qed.html %}
+
+<blockquote class="statement">
+	<p id="corollary" data-tralics-id="uid2" data-number=""><strong>Corollary 2</strong>
+	
+		For any irrational <span class="inline_math">\( \alpha \)</span> there are infinitely many <span
+			class="inline_math">\( \frac { p } { q } \)</span> such that</p>
+	<div class="equation">\[ \left| \alpha - \frac { p } { q } \right| &lt; \frac { 1 } { q ^ { 2 } } \]
+	</div>
+</blockquote>
+<p><em>Proof.</em></p>
+<div class="equation">\[
+	| p - q \alpha | &lt; \frac { 1 } { Q } \iff |q| | \frac{p}{q} - \alpha | &lt; \frac { 1 } { Q } \implies |
+	\frac{p}{q} - \alpha | &lt; \frac { 1 } { Q\cdot q } &lt; \frac { 1 } { q ^ { 2 } }
+	\]
+</div>
+<p class="noindent">For any given <span class="inline_math">\( Q\in Z \)</span> there exists integers <span
+		class="inline_math">\( p, q \)</span> that satisfies the above ineqaulity.<span
+		class="intersentencespace"></span> Find <span class="inline_math">\( Q' \in \mathbb Z : \frac 1 Q' &lt; | p-
+		q\alpha | \)</span>.<span class="intersentencespace"></span> Then there exists integers <span
+		class="inline_math">\( p' , q' \)</span> such that <span class="inline_math">\( | p'- q'\alpha | &lt; \frac
+		1 Q' &lt; | p- q\alpha | \)</span>.<span class="intersentencespace"></span> Clearly <span class="inline_math">\(
+		p \neq p' \, \land \, q \neq q' \)</span>.<span class="intersentencespace"></span> We
+	can repeat this process to find infinitely many such <span class="inline_math">\( p, q \)</span>.<span
+		class="intersentencespace"></span></p>
+		{% include qed.html %}
+<br>
+
+<blockquote class="statement">
+	<p id="uid3" data-tralics-id="uid3" data-number=""><strong>Theorem 3</strong> For any squarefree d there is a
+		nontrivial solution to <span class="inline_math">\( x^2 - d y^2=1 \)</span></p>
+</blockquote>
+
+<p><em>Proof. </em>Since we are looking for nontrivial solution <span class="inline_math">\( y\neq 0 \)</span>.<span
+		class="intersentencespace"></span> <span class="inline_math">\( x^2 - d y^2=1 \iff \frac x y = \sqrt d
+		\)</span>.<span class="intersentencespace"></span> Based on the earlier <a href="#corollary"
+		class="hyperref">corollary</a>, there are infinitely many <span class="inline_math">\( \frac { x } { y }
+		\)</span> such that</p>
+<div class="equation">\[ \left| \sqrt d - \frac { x } { y } \right| &lt; \frac { 1 } { y ^ { 2 } } \iff
+	\left| x - y\sqrt d \right| &lt; \frac { 1 } {y} &lt; y \sqrt d \]
+</div>
+<p class="noindent">Note</p>
+<div class="equation">\[
+	\left| x + y\sqrt d \right| \leq \left| x - y\sqrt d \right| + |2y \sqrt d| &lt; \frac { 1 } {y}+2y \sqrt d &lt;
+	3 y \sqrt d
+	\]
+</div>
+<p class="noindent">Therefore,</p>
+<div class="equation">\[
+	|N(x + y\sqrt d)| = \left| x + y\sqrt d \right| \cdot \left| x - y\sqrt d \right| &lt;3\sqrt d
+	\]
+</div>
+<p class="noindent">Since <span class="inline_math">\( N(x + y\sqrt d) \in \mathbb Z \)</span> and is bounded in a
+	finite interval, there exists an integer <span class="inline_math">\( M : |M|&lt;3\sqrt d \, \land \,
+		\)</span>there exists infinitely many pairs of <span class="inline_math">\( (x,y) \)</span> such that <span
+		class="inline_math">\( N(x + y\sqrt d) = M \)</span>.</p>
+<p>Since there are finitely many congruence classes mod <span class="inline_math">\( M \)</span>, there are
+	infinitely many <span class="inline_math">\( x \)</span> in at least one congruence classes <span
+		class="inline_math">\( [x_0]_M \)</span>.<span class="intersentencespace"></span> And there are infinitely
+	many <span class="inline_math">\( y \)</span> that is paired up with such <span class="inline_math">\( x
+		\)</span> in at least one congruence classes <span class="inline_math">\( [y_0]_M \)</span>.</p>
+<p>For any <span class="inline_math">\( (x_i, y_i) \)</span> and <span class="inline_math">\( (x_j, y_j) \)</span>
+	that satisfy the above conditions,</p>
+<div class="equation">\[
+	\frac { x _ { i } - y _ { i } \sqrt { d } } { x _ { j } - y _ { j } \sqrt { d } }
+	=\frac { (x _ { i } - y _ { i } \sqrt { d }) (x _ { j } + y _ { j } \sqrt { d }) } { (x _ { j } - y _ { j }
+	\sqrt { d }) (x _ { j } + y _ { j } \sqrt { d })}
+	= \frac { \left( x _ { i } x _ { j } - d y _ { i } y _ { j } \right) + \left( x _ { i } y _ { j } - x _ { j } y
+	_ { i } \right) \sqrt { d } } { M }
+	\]
+</div>
+<p class="noindent">Note,</p>
+<div id="uid4" data-tralics-id="uid4" data-number="1" class="equation"> \begin{align*}
+	x _ { i } y _ { j } - x _ { j } y _ { i } \equiv x_0y_0-x_0y_0 \equiv 0 &amp;\mod M \\
+	x _ { i } x _ { j } - d y _ { i } y _ { j } \equiv x_0^2-dy_0^2 \equiv M &amp;\mod M
+	\end{align*}
+</div>
+<p class="noindent">Therefore, <span class="inline_math">\( \exists a,b \in \mathbb Z \)</span> <em>s.t.</em></p>
+<div class="equation">\[
+	\frac { x _ { i } - y _ { i } \sqrt { d } } { x _ { j } - y _ { j } \sqrt { d } } =
+	a+b\sqrt { d }
+	\]
+</div>
+<p class="noindent">It is easy to tell that <span class="inline_math">\( N(a+b\sqrt { d })=M/M =1 \)</span>.<span
+		class="intersentencespace"></span> The solution is nontrivial when <span class="inline_math">\( (x_i, y_i)
+		\neq (x_j, y_j) \)</span>.<span class="intersentencespace"></span>
+</p>
+{% include qed.html %}
