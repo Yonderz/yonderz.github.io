@@ -1,0 +1,53 @@
+---
+title: Liouville’s theorem on diophantine approximation
+mathjax: true
+tags: number-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Liouville's theorem on diophantine approximation}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let $\alpha$ be an irrational number that is algebraic of degree $d$. Then for any real number $e > d$, there are at most finitely many rational numbers $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } }$.
+	\end{thm}
+	
+	\begin{proof}
+		If there is no such rational number $\frac { { p } } { q }$ then the number of solution is clearly finite.
+		
+		Now assume there exists at least one rational number $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } }$.
+		
+		Let $P(x)$ be a polynomial of degree $d$, with integers coefficients, such that $P(\alpha)=0$. Choose $\epsilon$ such that $P(x)$ has no roots other that $\alpha$ on the interval $[\alpha - \epsilon, \alpha + \epsilon]$
+		
+		Write $P(x)=(x-\alpha) \cdot Q(x)$ where $Q(x)$ is a monic polynomial with real coefficients of degree $d-1$. Since $Q(x)$ is continuous, there exists $K>0$ such that $|Q(x)| \leq K$ on the interval $[\alpha - \epsilon, \alpha + \epsilon]$
+		
+		For all rational number $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } }$, $\left| \frac { p } { q } - \alpha \right|>\epsilon$ or $\left| \frac { p } { q } - \alpha \right| \leq \epsilon$
+		
+		For all rational number $\frac { { p } } { q }$ such that $\epsilon < \left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } }$. $q^e< 1/\epsilon$ and $p \in [q(\alpha - \frac { 1 } { q ^ { e } }), q(\alpha + \frac { 1 } { q ^ { e } })]$, it is not difficult to tell the number of such rational numbers will be finite.
+		
+		For all rational number $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } } \, \land \, \left| \frac { p } { q } - \alpha \right| \leq \epsilon$. Note
+		$$
+		\left| P \left( \frac { p } { q } \right) \right| = \left|  \frac { p } { q } - \alpha \right| \left| Q \left( \frac { p } { q } \right) \right| < \frac { 1 } { q ^ { e } } K 
+		$$
+		
+		Since $P$ has degree $d$ and integer coefficients, 
+		$$P ( \frac { p } { q } )=m_d\frac { p^d } { q^d }+m_{d-1}\frac { p^{d-1} } { q^{d-1} }+\cdots+m_0=\frac{m_d p^d+ m_{d-1} p^{d-1} q+\cdots+m_0q^d}{q^d},$$ 
+		where both the nominator and the denominator are integers. Since $\alpha$ is irrational, $P ( \frac { p } { q } ) \neq 0$. Then $\left| P \left( \frac { p } { q } \right) \right| \geq \frac { 1 } { q ^ { d } }$. Note
+
+		$$
+		\frac { 1 } { q ^ { d } } \leq \left| P \left( \frac { p } { q } \right) \right|< \frac { 1 } { q ^ { e } } K \implies q^{e-d}<K
+		$$
+		
+		Similarly, the number of rational numbers $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } } \, \land \, \left| \frac { p } { q } - \alpha \right| \leq \epsilon$  will be finite.
+		
+		Therefore, there are at most finitely many rational numbers $\frac { { p } } { q }$ such that $\left| \frac { p } { q } - \alpha \right| < \frac { 1 } { q ^ { e } }$.
+	
+	\end{proof}		
+\end{document}
