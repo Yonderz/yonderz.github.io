@@ -14,8 +14,8 @@ key: 2021-09-09-theorem-on-diophantine-approximation
 </blockquote>
 <!--more-->
 
-<p><em>Proof. </em>If there is no such rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> then the number
-    of solution is clearly finite.</p>
+<p><em>Proof. </em>If there is no such rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> then
+    the number of solution is clearly finite.</p>
 <p>Now assume there exists at least one rational number <span class="inline_math">\( \frac { { p } } { q } \)</span>
     such that <span class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 } { q ^ { e } }
         \)</span>.</p>
@@ -35,42 +35,60 @@ key: 2021-09-09-theorem-on-diophantine-approximation
     <span class="inline_math">\( \left| \frac { p } { q } - \alpha \right|&gt;\epsilon \)</span> or <span
         class="inline_math">\( \left| \frac { p } { q } - \alpha \right| \leq \epsilon \)</span>
 </p>
-<p>For all rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> such that <span
-        class="inline_math">\( \epsilon &lt; \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 } { q ^ { e }
-        } \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( q^e&lt; 1/\epsilon
-        \)</span> and <span class="inline_math">\( p \in [q(\alpha - \frac { 1 } { q ^ { e } }), q(\alpha + \frac {
-        1 } { q ^ { e } })] \)</span>, it is not difficult to tell the number of such rational numbers will be
-    finite.</p>
-<p>For all rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> such that <span
-        class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 } { q ^ { e } } \, \land \,
-        \left| \frac { p } { q } - \alpha \right| \leq \epsilon \)</span>.<span class="intersentencespace"></span>
-    Note</p>
-<div class="equation">\[
-    \left| P \left( \frac { p } { q } \right) \right| = \left| \frac { p } { q } - \alpha \right| \left| Q \left(
-    \frac { p } { q } \right) \right| &lt; \frac { 1 } { q ^ { e } } K
-    \]
-</div>
-<p class="noindent">Since <span class="inline_math">\( P \)</span> has degree <span class="inline_math">\( d
-        \)</span> and integer coefficients,</p>
-<div class="equation">\[ P ( \frac { p } { q } )=m_d\frac { p^d } { q^d }+m_{d-1}\frac { p^{d-1} } { q^{d-1}
-    }+\cdots+m_0=\frac{m_d p^d+ m_{d-1} p^{d-1} q+\cdots+m_0q^d}{q^d}, \]
-</div>
-<p class="noindent">where both the nominator and the denominator are integers.<span class="intersentencespace"></span>
-    Since <span class="inline_math">\( \alpha \)</span> is irrational, <span class="inline_math">\( P ( \frac { p } { q
-        } ) \neq 0 \)</span>.<span class="intersentencespace"></span>
-    Then <span class="inline_math">\( \left| P \left( \frac { p } { q } \right) \right| \geq \frac { 1 } { q ^ { d }
-        } \)</span>.<span class="intersentencespace"></span> Note</p>
-<div class="equation">\[
-    \frac { 1 } { q ^ { d } } \leq \left| P \left( \frac { p } { q } \right) \right|&lt; \frac { 1 } { q ^ { e } } K
-    \implies q^{e-d}&lt;K
-    \]
-</div>
-<p class="noindent">Similarly, the number of rational numbers <span class="inline_math">\( \frac { { p } } { q }
-        \)</span> such that <span class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 }
-        { q ^ { e } } \, \land \, \left| \frac { p } { q } - \alpha \right| \leq \epsilon \)</span> will be finite.
-</p>
+<ol>
+    <li>
+        <p>For all rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> such that <span
+                class="inline_math">\( \epsilon &lt; \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 } { q ^ {
+                e }
+                } \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( q^e&lt; 1/\epsilon
+                \)</span> and <span class="inline_math">\( p \in [q(\alpha - \frac { 1 } { q ^ { e } }), q(\alpha +
+                \frac {
+                1 } { q ^ { e } })] \)</span>, it is not difficult to tell the number of such rational numbers will be
+            finite.</p>
+    </li>
+    <li>
+        <p>For all rational number <span class="inline_math">\( \frac { { p } } { q } \)</span> such that <span
+                class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 } { q ^ { e } } \, \land
+                \,
+                \left| \frac { p } { q } - \alpha \right| \leq \epsilon \)</span>.<span
+                class="intersentencespace"></span>
+            Note</p>
+        <div class="equation">\[
+            \left| P \left( \frac { p } { q } \right) \right| = \left| \frac { p } { q } - \alpha \right| \left| Q
+            \left(
+            \frac { p } { q } \right) \right| &lt; \frac { 1 } { q ^ { e } } K
+            \]
+        </div>
+        <p class="noindent">Since <span class="inline_math">\( P \)</span> has degree <span class="inline_math">\( d
+                \)</span> and integer coefficients,</p>
+        <div class="equation">\[ P ( \frac { p } { q } )=m_d\frac { p^d } { q^d }+m_{d-1}\frac { p^{d-1} } { q^{d-1}
+            }+\cdots+m_0=\frac{m_d p^d+ m_{d-1} p^{d-1} q+\cdots+m_0q^d}{q^d}, \]
+        </div>
+        <p class="noindent">where both the nominator and the denominator are integers.<span
+                class="intersentencespace"></span>
+            Since <span class="inline_math">\( \alpha \)</span> is irrational, <span class="inline_math">\( P ( \frac {
+                p } { q
+                } ) \neq 0 \)</span>.<span class="intersentencespace"></span>
+            Then <span class="inline_math">\( \left| P \left( \frac { p } { q } \right) \right| \geq \frac { 1 } { q ^ {
+                d }
+                } \)</span>.<span class="intersentencespace"></span> Note</p>
+        <div class="equation">\[
+            \frac { 1 } { q ^ { d } } \leq \left| P \left( \frac { p } { q } \right) \right|&lt; \frac { 1 } { q ^ { e }
+            } K
+            \implies q^{e-d}&lt;K
+            \]
+        </div>
+        <p class="noindent">Similarly, we can deduce the number of rational numbers <span class="inline_math">\( \frac {
+                { p } } { q }
+                \)</span> such that <span class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac {
+                1 }
+                { q ^ { e } } \, \land \, \left| \frac { p } { q } - \alpha \right| \leq \epsilon \)</span> will be
+            finite.
+        </p>
+    </li>
+</ol>
 <p>Therefore, there are at most finitely many rational numbers <span class="inline_math">\( \frac { { p } } { q }
         \)</span> such that <span class="inline_math">\( \left| \frac { p } { q } - \alpha \right| &lt; \frac { 1 }
         { q ^ { e } } \)</span>.</p>
 
-        {% include qed.html %}
+{% include qed.html %}
