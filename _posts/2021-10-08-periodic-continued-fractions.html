@@ -1,0 +1,51 @@
+---
+title: Periodic Continued Fractions
+mathjax: true
+tags: number-theory
+excerpt:
+---
+
+<blockquote class="statement">
+    <p><strong>Proposition</strong> Suppose that <span class="inline_math">\( \alpha \)</span> has an eventually
+        periodic continued fraction expansion.<span class="intersentencespace"></span> Then <span class="inline_math">\(
+            \alpha \)</span> is a quadratic irrational.<span class="intersentencespace"></span></p>
+</blockquote>
+<!--more-->
+
+<p><em>Proof. </em>We first show this when <span class="inline_math">\( \alpha \)</span> has a periodic continued fraction
+    expansion.<span class="intersentencespace"></span> We then have a <span class="inline_math">\( d \)</span> such
+    that</p>
+<div class="equation">\[
+    \alpha = a _ { 0 } + \frac { 1 } { a _ { 1 } + \frac { 1 } { a _ { 2 } + \cdots + \frac { 1 } { a _ { d - 1 } +
+    \frac { 1 } { \alpha } } } }
+    \]
+</div>
+<p class="noindent">Since <span class="inline_math">\( \alpha_0,\alpha_1, \cdots, \alpha_{d-1} \)</span> are all
+    integers</p>
+<div class="equation">\[
+    \alpha=\frac{x\alpha+y}{z\alpha+w} \implies z\alpha^2+(w-x)\alpha-y=0
+    \]
+</div>
+<p class="noindent">Since <span class="inline_math">\( \alpha \)</span> is irrational, <span class="inline_math">\(
+        z \neq 0 \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\( \alpha
+        \)</span> is a quadratic irrational.</p>
+<p>If <span class="inline_math">\(
+        \alpha=[\alpha_0,\alpha_1,\ldots,\alpha_m,\alpha_{m+1},\ldots,\alpha_{m+d-1},\alpha_{m+d},\ldots] \)</span>,
+    then</p>
+<div class="equation">\[
+    \beta=\frac{1}{\frac{1}{\frac{1}{\alpha-\alpha_{0}}-\alpha_{1}}-\cdots-\alpha_{m-2}}-\alpha_{m-1}
+    \]
+</div>
+<p class="noindent">Clearly <span class="inline_math">\( \beta \)</span> has a periodic continued fraction
+    expansion.<span class="intersentencespace"></span> So it is quadratic irrational.</p>
+<p>Note,</p>
+<div id="uid1" data-tralics-id="uid1" data-number="1" class="equation"> \begin{align*}
+    \beta=\frac{x\alpha+y}{z\alpha+w} &amp;\implies
+    a\left(\frac{x\alpha+y}{z\alpha+w}\right)^2+b\left(\frac{x\alpha+y}{z\alpha+w}\right)+c=0 \\
+    &amp;\implies a'\alpha^2+b'\alpha+c'=0
+    \end{align*}
+</div>
+<p class="noindent">Since <span class="inline_math">\( \alpha \)</span> is irrational, <span class="inline_math">\(
+        a' \neq 0 \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\( \alpha
+        \)</span> is a quadratic irrational.</p>
+        {% include qed.html %}
