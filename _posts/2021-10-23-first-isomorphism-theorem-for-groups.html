@@ -8,13 +8,13 @@ key: 2021-10-23-first-isomorphism-theorem-for-groups
 <blockquote class="statement">
     <p><strong>First Isomorphism Theorem for Groups</strong> If <span class="inline_math">\( \phi : G \rightarrow H
             \)</span> is a homomorphism then</p>
-</blockquote>
-<!--more-->
 <div class="equation">\[
     G / \operatorname { ker } ( \phi ) \cong \operatorname { im } ( \phi )
     \]
 </div>
-<p>Define a mapping <span class="inline_math">\( f:G / \operatorname { ker } ( \phi ) \rightarrow \operatorname { im } (
+</blockquote>
+<!--more-->
+<p><em>Proof. </em>Define a mapping <span class="inline_math">\( f:G / \operatorname { ker } ( \phi ) \rightarrow \operatorname { im } (
         \phi ) \)</span> by <span class="inline_math">\( f(a\operatorname { ker } ( \phi ))= \phi (a) \)</span></p>
 <p>The map is well-defined since if <span class="inline_math">\( a\operatorname { ker } ( \phi )=b\operatorname { ker }
         ( \phi ) \)</span>, then <span class="inline_math">\( a^{-1}b \in \operatorname { ker } ( \phi ) \)</span> and
@@ -24,14 +24,16 @@ key: 2021-10-23-first-isomorphism-theorem-for-groups
     ( \phi ))
     \]
 </div>
+<br>
 <p class="noindent">Let <span class="inline_math">\( h \)</span> be an arbitrary element of <span class="inline_math">\(
         \operatorname { im } ( \phi ) \)</span>, then <span class="inline_math">\( \exists g \in G : \phi(g)=h
         \)</span>.<span class="intersentencespace"></span> Since <span class="inline_math">\( f(g\operatorname { ker } (
         \phi ))=\phi(g)=h \)</span>, <span class="inline_math">\( f:G / \operatorname { ker } ( \phi ) \rightarrow
         \operatorname { im } ( \phi ) \)</span> is surjective.<span class="intersentencespace"></span> It is also injective
     because <span class="inline_math">\( f(a\operatorname { ker } ( \phi ))=f(b\operatorname { ker } ( \phi )) \implies
-        \phi(a)=\phi(b) \implies \phi(a)\phi(b^{-1})=e_H \implies ab^{-1}\in \operatorname { ker } ( \phi ) \implies
+        \phi(a)=\phi(b) \implies \phi(a)\phi(b^{-1})=e_H </span><span class="inline_math">\implies ab^{-1}\in \operatorname { ker } ( \phi ) \implies
         a\operatorname { ker } ( \phi )=b\operatorname { ker } ( \phi ) \)</span></p>
+<br>
 <p><span class="inline_math">\( f:G / \operatorname { ker } ( \phi ) \rightarrow \operatorname { im } ( \phi ) \)</span>
     is a homomorphism since</p>
 <div class="equation">\[
