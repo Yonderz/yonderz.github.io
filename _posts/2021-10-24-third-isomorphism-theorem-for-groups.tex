@@ -1,0 +1,42 @@
+---
+title: Third Isomorphism Theorem for Groups
+mathjax: true
+tags: group-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Third Isomorphism Theorem for Groups}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let $G$ be a group and let $H$ and $K$ be normal subgroups of $G$, with $H \leq K$. Then 
+		\begin{enumerate}
+			\item $K / H \unlhd G / H$
+			\item $( G / H ) / ( K / H ) \cong G / K$
+		\end{enumerate}
+	\end{thm}
+	\begin{proof}
+		\
+		\begin{enumerate}
+			\item $\forall x \in K/H; y \in G/H, \exists k \in K; g \in G : x=kH; y=gH $ and $yxy^{-1}=(gkg^{-1})H$. Since $K$ is a normal subgroup of $G$, $gkg^{-1} \in K$. Thus, $yxy^{-1} \in K/H$ and $K / H \unlhd G / H$
+			\item Consider a mapping $\phi : G/H \rightarrow G/K$ by $\phi(gH)=gK$
+			
+			The map is well-defined since if $aH=bH$, then $a^{-1}b\in H \subseteq K $ and
+			$$\phi(aH)=aK \circ (a^{-1}b) K = bK=\phi(bH)$$
+			
+			The map is homomorphic since $\forall aH, bH \in G/H$, $$\phi(aH)\phi(bH)=(aK)(bK)=(ab)K=\phi((ab)H)$$
+			
+			It is easy to tell $\phi$ is surjective, so $\operatorname { im } ( \phi )=G/K$. 
+			$$\phi(gH)=gK=K \iff g\in K \iff gH \in K/H \implies \operatorname { ker } ( \phi )=K/H $$
+			
+			Based on First Isomorphism Theorem, $( G / H ) / ( K / H ) \cong G / K$
+		\end{enumerate}
+	\end{proof}		
+\end{document}
