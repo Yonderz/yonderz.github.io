@@ -1,0 +1,51 @@
+---
+title: Third Isomorphism Theorem for Groups
+mathjax: true
+tags: group-theory
+excerpt:
+---
+<blockquote class="statement">
+    <p><strong>Third Isomorphism Theorem for Groups</strong> Let <span class="inline_math">\( G \)</span> be a group and
+        let <span class="inline_math">\( H \)</span> and <span class="inline_math">\( K \)</span> be normal subgroups of
+        <span class="inline_math">\( G \)</span>, with <span class="inline_math">\( H \leq K \)</span>.<span
+            class="intersentencespace"></span> Then
+    </p>
+    <ol>
+        <li><span class="inline_math">\( K / H \unlhd G / H \)</span>
+        </li>
+        <li><span class="inline_math">\( ( G / H ) / ( K / H ) \cong G / K \)</span>
+        </li>
+    </ol>
+</blockquote>
+<!--more-->
+
+<p><em>Proof. </em></p>
+<ol>
+    <li><span class="inline_math">\( \forall x \in K/H; y \in G/H, \exists k \in K; g \in G : x=kH; y=gH \)</span>
+        and <span class="inline_math">\( yxy^{-1}=(gkg^{-1})H \)</span>.<span class="intersentencespace"></span>
+        Since <span class="inline_math">\( K \)</span> is a normal subgroup of <span class="inline_math">\( G
+            \)</span>, <span class="inline_math">\( gkg^{-1} \in K \)</span>.<span class="intersentencespace"></span>
+        Thus, <span class="inline_math">\( yxy^{-1} \in K/H \)</span> and
+        <span class="inline_math">\( K / H \unlhd G / H \)</span>
+    </li>
+    <li>Consider a mapping <span class="inline_math">\( \phi : G/H \rightarrow G/K \)</span> by <span
+            class="inline_math">\( \phi(gH)=gK \)</span>
+        <p>The map is well-defined since if <span class="inline_math">\( aH=bH \)</span>, then <span
+                class="inline_math">\( a^{-1}b\in H \subseteq K \)</span> and</p>
+        <div class="equation">\[ \phi(aH)=aK \circ (a^{-1}b) K = bK=\phi(bH) \]
+        </div>
+        <p class="noindent">The map is homomorphic since <span class="inline_math">\( \forall aH, bH \in G/H
+                \)</span>,</p>
+        <div class="equation">\[ \phi(aH)\phi(bH)=(aK)(bK)=(ab)K=\phi((ab)H) \]
+        </div>
+        <p class="noindent">It is easy to tell <span class="inline_math">\( \phi \)</span> is surjective, so <span
+                class="inline_math">\( \operatorname { im } ( \phi )=G/K \)</span>.<span
+                class="intersentencespace"></span></p>
+        <div class="equation">\[ \phi(gH)=gK=K \iff g\in K \iff gH \in K/H \implies \operatorname { ker } ( \phi
+            )=K/H \]
+        </div>
+        <p class="noindent">Based on <a href="https://www.eurekz.com/post/2021/first-isomorphism-theorem-for-groups">First Isomorphism Theorem</a>, <span class="inline_math">\( ( G / H ) / ( K / H )
+                \cong G / K \)</span></p>
+    </li>
+</ol>
+{% include qed.html %}
