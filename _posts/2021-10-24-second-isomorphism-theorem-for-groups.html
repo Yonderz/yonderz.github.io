@@ -1,0 +1,46 @@
+---
+title: Second Isomorphism Theorem for Groups
+mathjax: true
+tags: group-theory
+key: 2021-10-24-second-isomorphism-theorem-for-groups
+---
+<blockquote class="statement">
+    <p><strong>Second Isomorphism Theorem for Groups</strong> Let <span class="inline_math">\( G \)</span> be a group,
+        <span class="inline_math">\( H \leq G \)</span> and <span class="inline_math">\( N \unlhd G \)</span>.<span
+            class="intersentencespace"></span> Then
+    </p>
+    <ol>
+        <li><span class="inline_math">\( HN \leq G \)</span>
+        </li>
+        <li><span class="inline_math">\( H \cap N \unlhd H \)</span>
+        </li>
+        <li><span class="inline_math">\( HN / N \cong H / ( H \cap N ) \)</span>
+        </li>
+    </ol>
+</blockquote>
+<!--more-->
+
+<p><em>Proof.</em></p>
+<ol>
+    <li><span class="inline_math">\( N \unlhd G \implies HN=NH \implies HN \leq G \)</span>
+    </li>
+    <li><span class="inline_math">\( \forall x \in H \cap N, x \in H \land x \in N. \)</span> Since <span
+            class="inline_math">\( N \unlhd G \)</span>, <span class="inline_math">\( \forall x \in H \cap N; h \in
+            H, hxh^{-1} \in N \)</span>.<span class="intersentencespace"></span> Note, <span class="inline_math">\(
+            x,h,h^{-1} \in H \)</span>.<span class="intersentencespace"></span> So, <span class="inline_math">\(
+            hxh^{-1} \in H \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\(
+            hxh^{-1} \in H \cap N \)</span> and <span class="inline_math">\( H \cap N \unlhd H \)</span>.<span
+            class="intersentencespace"></span>
+    </li>
+    <li>Consider now the canonical homomorphism <span class="inline_math">\( \varphi : HN \longrightarrow HN / N
+            \)</span> by <span class="inline_math">\( \varphi(h_in)=h_iN \)</span>
+        <p>The restriction of <span class="inline_math">\( \varphi \)</span> to <span class="inline_math">\( H
+                \)</span> is a homomorphism of <span class="inline_math">\( H \)</span> in <span class="inline_math">\(
+                HN / N \)</span> with kernel: <span class="inline_math">\( H \cap
+                \operatorname { ker } ( \varphi )=H \cap N \)</span>.<span class="intersentencespace"></span> It is
+            not difficult to see that <span class="inline_math">\( \operatorname { im } ( \varphi_{H} )=HN/N
+                \)</span>.<span class="intersentencespace"></span> Based on <a href="https://www.eurekz.com/post/2021/first-isomorphism-theorem-for-groups">First Isomorphism Theorem</a>, <span
+                class="inline_math">\( H / ( H \cap N ) \cong HN / N \)</span></p>
+    </li>
+</ol>
+{% include qed.html %}
