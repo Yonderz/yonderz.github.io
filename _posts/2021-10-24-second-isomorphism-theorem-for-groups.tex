@@ -1,0 +1,36 @@
+---
+title: Second Isomorphism Theorem for Groups
+mathjax: true
+tags: group-theory
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{thm}{Second Isomorphism Theorem for Groups}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{thm}
+		Let $G$ be a group, $H \leq G$ and $N \unlhd G$. Then
+		\begin{enumerate}
+			\item $HN \leq G$
+			\item $H \cap N \unlhd H$
+			\item $ HN / N \cong H / ( H \cap N )$
+		\end{enumerate}
+	\end{thm}
+	\begin{proof}\
+		\begin{enumerate}
+			\item $N \unlhd G \implies HN=NH \implies HN \leq G$
+			\item $\forall x \in H \cap N, x \in H \land x \in N.$ Since $N \unlhd G$, $\forall x \in H \cap N; h \in H, hxh^{-1} \in N$. Note, $x,h,h^{-1} \in H$. So, $hxh^{-1} \in H$. Thus, $hxh^{-1} \in H \cap N$ and $H \cap N \unlhd H$.
+			\item Consider now the canonical homomorphism $\varphi : HN \longrightarrow HN / N$ by $\varphi(h_in)=h_iN$
+			
+					The restriction of $\varphi$ to $H$ is a homomorphism of $H$ in $HN / N$ with kernel: $H \cap \operatorname { ker } ( \varphi )=H \cap N $. It is not difficult to see that such a homomorphism is surjective. Based on First Isomorphism Theorem, $   H / ( H \cap N ) \cong HN / N$
+		\end{enumerate}
+	\end{proof}
+			
+\end{document}
