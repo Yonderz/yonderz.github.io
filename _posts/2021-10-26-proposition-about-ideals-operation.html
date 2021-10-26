@@ -1,0 +1,34 @@
+---
+title: Proposition about Ideals Operation
+mathjax: true
+tags: algebra
+key: 2021-10-26-proposition-about-ideals-operation
+---
+<blockquote class="statement">
+    <p><strong>Proposition</strong> If <span class="inline_math">\( I + J = \langle 1 \rangle \)</span>, then <span
+            class="inline_math">\( I \cap J = I J \)</span></p>
+</blockquote>
+<!--more-->
+
+<p><em>Proof. </em></p>
+<ul><label><span class="inline_math">\( \subseteq: \)</span></label>
+    <li><span class="inline_math">\( \forall t \in I \cap J , t \in I \land t \in J \)</span>.<span
+            class="intersentencespace"></span> <span class="inline_math">\( I + J = \langle 1 \rangle \implies
+            \exists i_1 , j_1 \in I, J : i_1+j_1=1 \)</span>.<span class="intersentencespace"></span> Note, <span
+            class="inline_math">\( t=i_1t+j_1t \in IJ \)</span>.<span class="intersentencespace"></span> So, <span
+            class="inline_math">\( I \cap J \subseteq I J \)</span>
+    </li><label><span class="inline_math">\( \supseteq: \)</span></label>
+    <li><span class="inline_math">\( \forall t \in I J, \exists i_k , j_k \in I, J : t= \sum {i_kj_k}
+            \)</span>.<span class="intersentencespace"></span> Note, for all <span class="inline_math">\( k
+            \)</span>, <span class="inline_math">\( i_k , j_k \in I, R \implies i_kj_k \in I \)</span>.<span
+            class="intersentencespace"></span> Since <span class="inline_math">\( I \)</span> is closed under
+        addition, <span class="inline_math">\( t= \sum {i_kj_k} \in I \)</span>.
+        <p>Similarly, <span class="inline_math">\( t \in J \)</span>.<span class="intersentencespace"></span> Thus,
+            <span class="inline_math">\( t \in I \cap J \)</span> and <span class="inline_math">\( I \cap J
+                \supseteq I J \)</span>
+        </p>
+    </li>
+</ul>
+<p>Overall, <span class="inline_math">\( I \cap J = I J \)</span>
+</p>
+{% include qed.html %}
