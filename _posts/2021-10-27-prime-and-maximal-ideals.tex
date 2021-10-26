@@ -1,0 +1,59 @@
+---
+title: Prime and Maximal Ideals
+mathjax: true
+tags: algebra
+excerpt: 
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem{defn}{Definition}
+\newtheorem{lem}[defn]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{defn}
+		An ideal $I$ of $R$ is prime if the quotient $R / I$ is an integral domain. It is maximal if $R / I$ is a field.
+	\end{defn}
+	
+	
+	\begin{lem}
+		An ideal $I$ is prime if, and only if, for every pair of elements $r , s$ in $R$ such that $rs$ is in $I$, either $r$ is in $I$ or s is in $I$.	
+	\end{lem}
+	\begin{proof}\
+		\begin{itemize}
+			\item [$\Rightarrow:$] An ideal $I$ of $R$ is prime $\implies$ $R / I$ is an integral domain $\implies \forall a,b \in R/I, ab=0+I \implies a=0+I  \lor b=0+I$
+			
+			 Since $\forall a,b \in R/I, \exists x,y \in R : a=x+I,b=y+I$. So, $ab=xy+I=0+I \implies x+I=0+I  \lor y+I=0+I$. Thus, $\forall xy-0 \in I \implies x-0=x \in I \lor y \in I$.
+			\item [$\Leftarrow:$] $xy \in I \implies x \in I \lor y \in I$ 
+				
+				$\forall x+I,y+I \in R/I, (x+I)(y+I)=xy+I=0+I \implies xy \in I \implies x+I=0+I \lor y+I =0+I$. Thus, $R / I$ is an integral domain and $I$ is prime.
+		\end{itemize}
+	\end{proof}
+	
+	\begin{lem}
+		 The only ideals of a field are the zero ideal and the unit ideal.
+	\end{lem}
+	\begin{proof}
+		Assume $I$ is an ideal of the field $F$ that has a non-zero element $r$. By definition, $\exists r^{-1} \in F : rr^{-1}=1\in I$. Since $1 \in I$, unit ideal must be a subset of $I$. But every ideal is a subset of the unit ideal, so $I$ must be equivalent to the unit ideal.
+		
+		Clearly, zero ideal is also an ideal of $F$.
+	\end{proof}
+	
+	\begin{lem}
+		An ideal $I$ is maximal if, and only if, the only ideals of $R$ containing $I$ are $I$ and the unit ideal.	
+	\end{lem}
+	\begin{proof}\
+		\begin{itemize}
+			\item [$\Rightarrow:$] $I$ is maximal $\implies$ $R / I$ is a field
+			
+			Assume there exist an ideal $J$ of $R$ such that $I \subseteq J \subseteq R$. Note $J/I \subseteq R/I$. Since $J$ is an ideal of R, $J/I$ is an ideal of $R/I$. $R / I$ is a field. Based on the previous lemma, $J/I$ is zero ideal or unit ideal which means $J=I$ or $J=R.$
+				
+			\item [$\Leftarrow:$] For any $r \in R \setminus I$, $I$ is an ideal of $I+\langle r \rangle$. $r \not\in I$, $I+\langle r \rangle$ must be the unit ideal. Thus, $1 \in (I+\langle r \rangle)$. There exists $t \in R, i \in I : i+rt=1$. Thus, $rt \equiv 1 \bmod I$ and $r$ has an inverse in $R/I$. Note, $\forall i \in I, i\equiv 0 \bmod I$. Therefore, $R / I$ is a field.
+				
+				
+		\end{itemize}
+	\end{proof}
+\end{document}
