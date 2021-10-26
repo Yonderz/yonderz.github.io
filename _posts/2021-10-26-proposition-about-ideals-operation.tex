@@ -1,0 +1,30 @@
+---
+title: Proposition about Ideals Operation
+mathjax: true
+tags: algebra
+excerpt:
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem*{prop}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{prop}
+		If $I + J = \langle 1 \rangle$, then $I \cap J = I J$
+	\end{prop}
+	\begin{proof}\
+		\begin{itemize}
+			\item [$\subseteq:$] $\forall t \in I \cap J , t \in I \land t \in J$. $I + J = \langle 1 \rangle \implies \exists i_1 , j_1 \in I, J : i_1+j_1=1$. Note, $t=i_1t+j_1t \in IJ$. So, $I \cap J \subseteq I J$ 
+			\item [$\supseteq:$] $\forall t \in I J, \exists i_k , j_k \in I, J : t= \sum {i_kj_k}$. Note, for all $k$, $i_k , j_k \in I, R \implies i_kj_k \in I $. Since $I$ is closed under addition, $t= \sum {i_kj_k} \in I $. 
+			
+			Similarly, $t \in J$. Thus, $t \in I \cap J$ and $I \cap J \supseteq I J$
+		\end{itemize}
+		Overall, $I \cap J = I J$
+	\end{proof}		
+\end{document}
