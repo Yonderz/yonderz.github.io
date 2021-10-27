@@ -1,0 +1,96 @@
+---
+title: Prime and Maximal Ideals
+mathjax: true
+tags: algebra
+key: 2021-10-27-prime-and-maximal-ideals
+---
+<blockquote class="statement">
+    <p id="uid1" data-tralics-id="uid1" data-number=""><strong>Definition 1</strong> An ideal <span
+            class="inline_math">\( I
+            \)</span> of <span class="inline_math">\( R \)</span> is prime if the quotient
+        <span class="inline_math">\( R / I \)</span> is an integral domain.<span class="intersentencespace"></span> It
+        is maximal if <span class="inline_math">\( R / I \)</span> is a field.<span class="intersentencespace"></span>
+    </p>
+</blockquote>
+<!--more-->
+
+<blockquote class="statement">
+    <p id="uid2" data-tralics-id="uid2" data-number=""><strong>Lemma 2</strong> An ideal <span class="inline_math">\( I
+            \)</span> is prime if, and only if, for every pair of elements <span class="inline_math">\( r , s \)</span>
+        in <span class="inline_math">\( R \)</span> such that <span class="inline_math">\( rs \)</span> is in <span
+            class="inline_math">\( I \)</span>, either <span class="inline_math">\( r \)</span> is in <span
+            class="inline_math">\( I \)</span> or s is in <span class="inline_math">\( I \)</span>.<span
+            class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<ul><label><span class="inline_math">\( \Rightarrow: \)</span></label>
+    <li>An ideal <span class="inline_math">\( I \)</span> of <span class="inline_math">\( R \)</span> is prime <span
+            class="inline_math">\( \implies \)</span> <span class="inline_math">\( R / I \)</span> is an integral
+        domain <span class="inline_math">\( \implies \forall a,b \in R/I, ab=0+I \implies a=0+I \lor b=0+I \)</span>
+        <p>Since <span class="inline_math">\( \forall a,b \in R/I, \exists x,y \in R : a=x+I,b=y+I \)</span>.<span
+                class="intersentencespace"></span> So, <span class="inline_math">\( ab=xy+I=0+I \implies x+I=0+I
+                \lor y+I=0+I \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\(
+                \forall xy-0 \in I \implies x-0=x \in I \lor y \in I \)</span>.<span class="intersentencespace"></span>
+        </p>
+    </li><label><span class="inline_math">\( \Leftarrow: \)</span></label>
+    <li><span class="inline_math">\( xy \in I \implies x \in I \lor y \in I \)</span>
+        <p><span class="inline_math">\( \forall x+I,y+I \in R/I, (x+I)(y+I)=xy+I=0+I \implies xy \in I \implies
+                x+I=0+I \lor y+I =0+I \)</span>.<span class="intersentencespace"></span> Thus, <span
+                class="inline_math">\( R / I \)</span> is an integral domain and <span class="inline_math">\( I
+                \)</span> is prime.<span class="intersentencespace"></span></p>
+    </li>
+</ul>
+
+<blockquote class="statement">
+    <p id="uid5" data-tralics-id="uid5" data-number=""><strong>Lemma 3</strong> The only ideals of a field are the zero
+        ideal and the unit ideal.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em>Assume <span class="inline_math">\( I \)</span> is an ideal of the field <span class="inline_math">\( F \)</span>
+    that has a non-zero element <span class="inline_math">\( r \)</span>.<span class="intersentencespace"></span> By
+    definition, <span class="inline_math">\( \exists r^{-1} \in F : rr^{-1}=1\in I \)</span>.<span
+        class="intersentencespace"></span> Since <span class="inline_math">\( 1 \in I \)</span>, unit ideal must be
+    a subset of <span class="inline_math">\( I \)</span>.<span class="intersentencespace"></span> But every ideal is
+    a subset of the unit ideal, so <span class="inline_math">\( I \)</span> must be equivalent to the unit ideal.
+</p>
+<p>Clearly, zero ideal is also an ideal of <span class="inline_math">\( F \)</span>.<span
+        class="intersentencespace"></span></p>
+
+
+<blockquote class="statement">
+    <p id="uid6" data-tralics-id="uid6" data-number=""><strong>Lemma 4</strong> An ideal <span class="inline_math">\( I
+            \)</span> is maximal if, and only if, the only ideals of <span class="inline_math">\( R \)</span> containing
+        <span class="inline_math">\( I \)</span> are <span class="inline_math">\( I \)</span> and the unit ideal.<span
+            class="intersentencespace"></span>
+    </p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<ul><label><span class="inline_math">\( \Rightarrow: \)</span></label>
+    <li><span class="inline_math">\( I \)</span> is maximal <span class="inline_math">\( \implies \)</span> <span
+            class="inline_math">\( R / I \)</span> is a field
+        <p>Assume there exist an ideal <span class="inline_math">\( J \)</span> of <span class="inline_math">\( R
+                \)</span> such that <span class="inline_math">\( I \subseteq J \subseteq R \)</span>.<span
+                class="intersentencespace"></span> Note <span class="inline_math">\( J/I \subseteq R/I
+                \)</span>.<span class="intersentencespace"></span> Since <span class="inline_math">\( J \)</span> is
+            an ideal of R, <span class="inline_math">\( J/I \)</span> is an ideal of <span class="inline_math">\(
+                R/I \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( R / I \)</span>
+            is a field.<span class="intersentencespace"></span> Based on the previous lemma, <span
+                class="inline_math">\( J/I \)</span> is zero ideal or unit ideal which means <span
+                class="inline_math">\( J=I \)</span> or <span class="inline_math">\( J=R. \)</span></p>
+    </li><label><span class="inline_math">\( \Leftarrow: \)</span></label>
+    <li>For any <span class="inline_math">\( r \in R \setminus I \)</span>, <span class="inline_math">\( I \)</span>
+        is an ideal of <span class="inline_math">\( I+\langle r \rangle \)</span>.<span
+            class="intersentencespace"></span> <span class="inline_math">\( r \not\in I \)</span>, <span
+            class="inline_math">\( I+\langle r \rangle \)</span> must be the unit ideal.<span
+            class="intersentencespace"></span> Thus, <span class="inline_math">\( 1 \in (I+\langle r \rangle)
+            \)</span>.<span class="intersentencespace"></span> There exists <span class="inline_math">\( t \in R, i
+            \in I : i+rt=1 \)</span>.<span class="intersentencespace"></span> Thus, <span class="inline_math">\( rt
+            \equiv 1 \bmod I \)</span> and <span class="inline_math">\( r \)</span> has an inverse in <span
+            class="inline_math">\( R/I \)</span>.<span class="intersentencespace"></span> Note, <span
+            class="inline_math">\( \forall i \in I, i\equiv 0 \bmod I \)</span>.<span class="intersentencespace"></span>
+        Therefore, <span class="inline_math">\( R / I \)</span> is a field.
+    </li>
+</ul>
+{% include qed.html %}
