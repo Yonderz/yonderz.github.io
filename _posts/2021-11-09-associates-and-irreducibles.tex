@@ -1,0 +1,54 @@
+---
+title: Associates and Irreducibles
+mathjax: true
+tags: algebra
+excerpt: 
+---
+\documentclass{article}
+%preamble
+\usepackage{parskip}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks=true]{hyperref}
+\newtheorem{pos}{Proposition}
+\newtheorem{cor}{Corollary}[pos]
+%\newtheorem{claim}[lem]{Claim}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+
+\begin{document}
+	\begin{pos}
+		$a,b$ are non-zero element of an integral domain $R$. $a$ divides $b$ and $b$ divides $a$ if and only if there exist a unit $u$ such that $a=bu$
+	\end{pos}
+			
+	\begin{proof}\
+		\begin{itemize}
+			\item [$\Rightarrow:$] $\exists r,s \in R : sa=b$ and $rb=a$. Then, $a=rsa$ and $a(1-rs)=0$. Since $R$ is an integral domain and $a$ is non-zero, $1-rs=0$. Thus, $r,s$ are units and $a=rb$.
+			\item [$\Leftarrow:$] $a=bu \implies b \mid a$. Since $u$ is a unit, $\exists t \in R : ut=1$. $at=b(ut)=b \implies a \mid b$.
+		\end{itemize}
+	\end{proof}
+	
+	\begin{pos}
+		$a|b \iff \langle b \rangle \subseteq \langle a \rangle$
+	\end{pos}
+	\begin{proof}
+	$$a | b \iff ar=b \in \langle a \rangle \iff \langle b \rangle \subseteq \langle a \rangle$$
+	\end{proof}
+	
+	\begin{cor}
+		$a,b$ are associates $\iff \langle a \rangle = \langle b \rangle$
+	\end{cor}	
+	\begin{proof}
+	$$a | b \land b|a \iff \langle a \rangle \subseteq \langle b \rangle \land \langle a \rangle \supseteq \langle b \rangle \iff \langle a \rangle = \langle b \rangle$$		
+	\end{proof}
+	
+	\begin{pos}
+		$p$ is irreducible if and only if $\langle p \rangle$ is maximal amongst all principal ideals that contain $\langle p \rangle$.
+	\end{pos}
+	
+	\begin{proof}\
+		\begin{itemize}
+			\item [$\Rightarrow:$]	For any principal ideal $\langle x \rangle$ that contains $\langle p \rangle$ and is not the unit ideal, $p \in \langle x \rangle$. So there exists $ r \in R : p=xr$. Since $x$ divides $p$ and $p$ is irreducible, $x$ is either an unit or an associate of $p$. If $x$ is an unit, then $\langle x \rangle$ is the unit ideal. Thus, $x$ is an associate of $p$. Based on the previous corollary, $\langle x \rangle = \langle p \rangle$ and $\langle p \rangle$ is maximal amongst all principal ideals that contain $\langle p \rangle$.
+			\item [$\Leftarrow:$]	For any $r$ that divides $p$,  $\langle p \rangle \subseteq \langle r \rangle$. Since $\langle p \rangle$ is maximal amongst all principal ideals, $\langle p \rangle = \langle r \rangle$ or $\langle r \rangle$ is the unit ideal. So, $r$ is either an associate of $p$ or an unit. Thus, $p$ is irreducible.
+		\end{itemize}
+	\end{proof}
+	
+\end{document}
