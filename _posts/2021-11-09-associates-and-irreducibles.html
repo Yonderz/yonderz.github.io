@@ -1,0 +1,94 @@
+---
+title: Associates and Irreducibles
+mathjax: true
+tags: algebra
+key: 2021-11-09-associates-and-irreducibles
+excerpt: <blockquote class="statement"> <p id="uid6" data-tralics-id="uid6" data-number="" class="noindent"><strong>Proposition 3</strong> <span class="inline_math">\( p \)</span> is irreducible if and only if <span class="inline_math">\( \langle p \rangle \)</span> is maximal amongst all principal ideals that contain <span class="inline_math">\( \langle p \rangle \)</span>.<span class="intersentencespace"></span></p> </blockquote>
+---
+
+<blockquote class="statement">
+    <p id="uid1" data-tralics-id="uid1" data-number=""><strong>Proposition 1</strong> <span class="inline_math">\( a,b
+            \)</span> are non-zero element of an integral domain <span class="inline_math">\( R \)</span>.<span
+            class="intersentencespace"></span> <span class="inline_math">\( a \)</span> divides <span
+            class="inline_math">\(
+            b \)</span> and <span class="inline_math">\( b \)</span> divides <span class="inline_math">\( a \)</span> if
+        and
+        only if there exist a unit <span class="inline_math">\( u
+            \)</span> such that <span class="inline_math">\( a=bu \)</span></p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<ul><label><span class="inline_math">\( \Rightarrow: \)</span></label>
+    <li><span class="inline_math">\( \exists r,s \in R : sa=b \)</span> and <span class="inline_math">\( rb=a
+            \)</span>.<span class="intersentencespace"></span> Then, <span class="inline_math">\( a=rsa \)</span>
+        and <span class="inline_math">\( a(1-rs)=0 \)</span>.<span class="intersentencespace"></span> Since <span
+            class="inline_math">\( R \)</span> is an integral domain and <span class="inline_math">\( a \)</span> is
+        non-zero, <span class="inline_math">\( 1-rs=0 \)</span>.<span class="intersentencespace"></span> Thus, <span
+            class="inline_math">\( r,s \)</span> are units and <span class="inline_math">\( a=rb \)</span>.<span
+            class="intersentencespace"></span>
+    </li><label><span class="inline_math">\( \Leftarrow: \)</span></label>
+    <li><span class="inline_math">\( a=bu \implies b \mid a \)</span>.<span class="intersentencespace"></span> Since
+        <span class="inline_math">\( u \)</span> is a unit, <span class="inline_math">\( \exists t \in R : ut=1
+            \)</span>.<span class="intersentencespace"></span> <span class="inline_math">\( at=b(ut)=b \implies a
+            \mid b \)</span>.<span class="intersentencespace"></span>
+    </li>
+</ul>
+{% include qed.html %}
+
+<blockquote class="statement">
+    <p id="uid4" data-tralics-id="uid4" data-number=""><strong>Proposition 2</strong> <span class="inline_math">\( a|b
+            \iff \langle b \rangle \subseteq \langle a \rangle \)</span></p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<div class="equation">\[ a | b \iff ar=b \in \langle a \rangle \iff \langle b \rangle \subseteq \langle a \rangle \]
+</div>
+{% include qed.html %}
+
+<blockquote class="statement">
+    <p id="uid5" data-tralics-id="uid5" data-number="" class="noindent"><strong>Corollary 2.1</strong> <span
+            class="inline_math">\( a,b \)</span> are associates <span class="inline_math">\( \iff \langle a \rangle =
+            \langle b \rangle \)</span></p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<div class="equation">\[ a | b \land b|a \iff \langle a \rangle \subseteq \langle b \rangle \land \langle a \rangle
+    \supseteq \langle b \rangle \iff \langle a \rangle = \langle b \rangle \]
+</div>
+{% include qed.html %}
+
+<blockquote class="statement">
+    <p id="uid6" data-tralics-id="uid6" data-number="" class="noindent"><strong>Proposition 3</strong> <span
+            class="inline_math">\( p \)</span> is irreducible if and only if <span class="inline_math">\( \langle p
+            \rangle \)</span> is maximal amongst all principal ideals that contain <span class="inline_math">\( \langle
+            p \rangle \)</span>.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em></p>
+<ul><label><span class="inline_math">\( \Rightarrow: \)</span></label>
+    <li>For any principal ideal <span class="inline_math">\( \langle x \rangle \)</span> that contains <span
+            class="inline_math">\( \langle p \rangle \)</span> and is not the unit ideal, <span class="inline_math">\( p
+            \in \langle x \rangle \)</span>.<span class="intersentencespace"></span> So
+        there exists <span class="inline_math">\( r \in R : p=xr \)</span>.<span class="intersentencespace"></span>
+        Since <span class="inline_math">\( x \)</span> divides <span class="inline_math">\( p \)</span> and <span
+            class="inline_math">\( p \)</span> is irreducible, <span class="inline_math">\( x \)</span> is either an
+        unit or an associate of <span class="inline_math">\( p \)</span>.<span class="intersentencespace"></span> If
+        <span class="inline_math">\( x \)</span> is an unit, then <span class="inline_math">\( \langle x \rangle
+            \)</span> is the unit ideal.<span class="intersentencespace"></span> Thus, <span class="inline_math">\(
+            x \)</span> is an associate of <span class="inline_math">\( p \)</span>.<span
+            class="intersentencespace"></span> Based on the previous corollary, <span class="inline_math">\( \langle
+            x \rangle = \langle p \rangle \)</span> and <span class="inline_math">\( \langle p \rangle \)</span> is
+        maximal amongst all principal ideals that contain <span class="inline_math">\( \langle p \rangle
+            \)</span>.<span class="intersentencespace"></span>
+    </li><label><span class="inline_math">\( \Leftarrow: \)</span></label>
+    <li>For any <span class="inline_math">\( r \)</span> that divides <span class="inline_math">\( p \)</span>,
+        <span class="inline_math">\( \langle p \rangle \subseteq \langle r \rangle \)</span>.<span
+            class="intersentencespace"></span> Since <span class="inline_math">\( \langle p \rangle \)</span> is
+        maximal amongst all principal ideals, <span class="inline_math">\( \langle p \rangle = \langle r \rangle
+            \)</span> or <span class="inline_math">\( \langle r \rangle \)</span> is the unit ideal.<span
+            class="intersentencespace"></span> So, <span class="inline_math">\( r \)</span> is either an associate
+        of <span class="inline_math">\( p \)</span> or an unit.<span class="intersentencespace"></span> Thus, <span
+            class="inline_math">\( p \)</span> is irreducible.<span class="intersentencespace"></span>
+    </li>
+</ul>
+{% include qed.html %}
