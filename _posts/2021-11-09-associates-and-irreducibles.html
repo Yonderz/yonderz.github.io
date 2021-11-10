@@ -3,6 +3,7 @@ title: Associates and Irreducibles
 mathjax: true
 tags: algebra
 key: 2021-11-09-associates-and-irreducibles
+modify_date: 2021-11-10
 excerpt: <blockquote class="statement"> <p id="uid6" data-tralics-id="uid6" data-number="" class="noindent"><strong>Proposition 3</strong> <span class="inline_math">\( p \)</span> is irreducible if and only if <span class="inline_math">\( \langle p \rangle \)</span> is maximal amongst all principal ideals that contain <span class="inline_math">\( \langle p \rangle \)</span>.<span class="intersentencespace"></span></p> </blockquote>
 ---
 
@@ -91,4 +92,24 @@ excerpt: <blockquote class="statement"> <p id="uid6" data-tralics-id="uid6" data
             class="inline_math">\( p \)</span> is irreducible.<span class="intersentencespace"></span>
     </li>
 </ul>
+{% include qed.html %}
+
+<blockquote class="statement">
+    <p id="uid9" data-tralics-id="uid9" data-number=""><strong>Proposition 4</strong> In an integral domain <span
+            class="inline_math">\( R \)</span>, every prime is irreducible.<span class="intersentencespace"></span></p>
+</blockquote>
+
+<p><em>Proof. </em><span class="inline_math">\( p \)</span> is a prime in an integral domain <span class="inline_math">\( R
+        \)</span>.<span class="intersentencespace"></span> For any <span class="inline_math">\( a,b \in R \)</span> such
+    that <span class="inline_math">\( p=ab \)</span>.<span class="intersentencespace"></span> Since <span
+        class="inline_math">\( p \)</span> is a prime, WLOG, let’s assume <span class="inline_math">\( p|a
+        \)</span>.<span class="intersentencespace"></span> Then there exist <span class="inline_math">\( t \in R
+        \)</span> such that <span class="inline_math">\( pt=abt=a \)</span>.<span class="intersentencespace"></span> So,
+    <span class="inline_math">\( a(bt-1)=0 \)</span>.<span class="intersentencespace"></span> Since <span
+        class="inline_math">\( R \)</span> is an integral domain and <span class="inline_math">\( a\neq 0 \)</span>,
+    <span class="inline_math">\( bt=1 \)</span> and <span class="inline_math">\( b \)</span> is an unit.<span
+        class="intersentencespace"></span> Therefore, <span class="inline_math">\( a \)</span> is an associate of <span
+        class="inline_math">\( p \)</span> and <span class="inline_math">\( p \)</span> is irreducible.<span
+        class="intersentencespace"></span>
+</p>
 {% include qed.html %}
