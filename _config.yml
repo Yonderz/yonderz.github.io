@@ -221,6 +221,6 @@ defaults:
 ##############################
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-paginate
   - jemoji
